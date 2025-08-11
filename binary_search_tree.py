@@ -35,7 +35,7 @@ class BinarySearchTree:
     def _check_output_type(self, output_type):
         if not isinstance(output_type, str):
             raise TypeError(f"Invalid type: {type(output_type)} for argument. Enter relevant 'str'" +
-                            "keywords from the list {appropriate_keywords}")
+                             "keywords from the list {appropriate_keywords}")
         elif output_type not in appropriate_keywords:
             raise Exception(f"Invalid keyword. Choose one in between the list: {appropriate_keywords}")
         
@@ -44,7 +44,6 @@ class BinarySearchTree:
         self._check_empty()
         
         if output_type == "list":
-            # return "[ " + " ".join(str(node) for node in self._inorder(self.root)) + " ]"
             return list(node.value for node in self._inorder(self.root))
         elif output_type == "print":
             for i in self._inorder(self.root):
