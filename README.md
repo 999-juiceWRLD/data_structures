@@ -57,8 +57,6 @@ This repo contains implementations of various data structures. Each article list
 - `root`: return the root value
 - `min`: return the minimum value, using `find_min()` internally
 - `max`: return the maximum value, using `find_max()` internally
-- `_check_empty()`: raise `Exception` if the root is `None`
-- `_check_output_type()`: checks if the arguments are valid for traverse methods
 - `inorder_traversal`: traverse the tree in-order
 - `preorder_traversal`: traverse the tree pre-order
 - `postorder_traversal`: traverse the tree post-order

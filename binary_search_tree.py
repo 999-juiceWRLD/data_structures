@@ -34,13 +34,11 @@ class BinarySearchTree:
     
     def _check_output_type(self, output_type):
         if not isinstance(output_type, str):
-            raise TypeError(f"Invalid type: {type(output_type)} for argument. Enter relevant 'str' keywords from the list {appropriate_keywords}")
-        #elif output_type != "print" and output_type != "list":
+            raise TypeError(f"Invalid type: {type(output_type)} for argument. Enter relevant 'str'" +
+                            "keywords from the list {appropriate_keywords}")
         elif output_type not in appropriate_keywords:
             raise Exception(f"Invalid keyword. Choose one in between the list: {appropriate_keywords}")
         
-    
-    # DFT Methods
     def inorder_traversal(self, output_type="list"):
         self._check_output_type(output_type)
         self._check_empty()
@@ -145,16 +143,13 @@ class BinarySearchTree:
             raise Exception("Binary search tree is empty")
         elif current_node.value == searched_node.value:
             return current_node
-            # print(f"TreeNode({searched_node.value}) exists in the BST")
         else:
             if searched_node.value < current_node.value:
                 if current_node.left_child is None:
-                    # print(f"{searched_node.value} is not found in the tree") # return node later
                     return None
                 return self.search_element(searched_node, current_node.left_child)
             else:
                 if current_node.right_child is None:
-                    # print(f"{searched_node.value} is not found in the tree") # return node later
                     return None
                 return self.search_element(searched_node, current_node.right_child)
 
