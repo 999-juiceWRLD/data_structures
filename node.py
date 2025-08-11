@@ -31,6 +31,10 @@ class TreeNode:
     def value(self):
         return self._value
     
+    @value.setter
+    def value(self, value):
+        self._value = value
+    
     @property
     def left_child(self):
         return self._left_child
