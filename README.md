@@ -21,7 +21,7 @@ This repo contains implementations of various data structures. Each article list
 - `find_by_value()`: find the first occurence of a value in the list.
 - `reverse_find_by_value()`: find the last occurence of a value in the list.
 
-## Stack
+## Stacks (Array Stack & Linked Stack)
 
 - `size`: returns the size of the stack
 - `top`: returns the topmost element
@@ -32,7 +32,7 @@ This repo contains implementations of various data structures. Each article list
 - `clear()`: remove all the elements of the stack
 - `copy()`: duplicate the stack without sharing the underlying list
 
-## Queue
+## Queues (Array Queue, Linked Queue, Circular Queue, Priority Queue)
 
 - `size`: returns the size of the queue
 - `front`: returns the first element in the queue
@@ -42,6 +42,15 @@ This repo contains implementations of various data structures. Each article list
 - `is_empty()`: returns `True` if the queue is empty else `False`
 - `clear()`: remove all the elements of the queue
 - `copy()`: returns a deep copy of the queue
+
+### Circular Queue
+
+- `is_full()`: return `True` if the array is full else `False`
+- `is_rear_idx_reached()`: return `True` if the rear index reached to the final index (`len(self.array) - 1`)
+
+### Priority Queue
+
+- `insert_node_head()`: instead of entering just the value (data), this method takes `PriorityQueueNode` object as parameter and inserts it at the head of the list
 
 ## Binary Search Tree
 
