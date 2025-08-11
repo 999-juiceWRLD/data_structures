@@ -25,9 +25,9 @@ This repo contains implementations of various data structures. Each article list
 
 - `size`: returns the size of the stack
 - `top`: returns the topmost element
-- `push()`: add a new element to the topmost position in the stack ($O(1)$)
-- `pop()`: remove the topmost element ($O(1)$)
-- `peek()`: return the topmost element without removing it from the stack ($O(1)$)
+- `push()`: add a new element to the topmost position in the stack
+- `pop()`: remove the topmost element
+- `peek()`: return the topmost element without removing it from the stack
 - `is_empty()`: return `True` if the stack is empty else `False`
 - `clear()`: remove all the elements of the stack
 - `copy()`: duplicate the stack without sharing the underlying list
