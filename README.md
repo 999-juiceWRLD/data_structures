@@ -54,7 +54,20 @@ This repo contains implementations of various data structures. Each article list
 
 ## Binary Search Tree
 
-to be completed...
+- `root`: return the root value
+- `min`: return the minimum value, using `find_min()` internally
+- `max`: return the maximum value, using `find_max()` internally
+- `_check_empty()`: raise `Exception` if the root is `None`
+- `_check_output_type()`: checks if the arguments are valid for traverse methods
+- `inorder_traversal`: traverse the tree in-order
+- `preorder_traversal`: traverse the tree pre-order
+- `postorder_traversal`: traverse the tree post-order
+- `levelorder_traversal`: traverse each level using `QueueArray`
+- `insert()`: insert a new node into the tree
+- `search_element()`: search for an element and return `self._Node` else `None`
+- `delete_node()`: delete an element from the tree. raise `Exception` if the tree is empty
+- `find_min()`: return the node of the minimum value. if `return_value=True`, return the value of the node
+- `find_max()`: return the node of the maximum value. if `return_value=True`, return the value of the node
 
 ### **To Do's**
 - Index'li fonksiyonlara `index += length` diyerek negatif index ekleme özelliği
