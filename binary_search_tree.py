@@ -1,7 +1,8 @@
 from node import TreeNode
 from queues import QueueArray
 
-appropriate_keywords = ["print", "list", "generator"]
+traversal_keywords = ["print", "list", "generator"]
+copy_keywords = ["iterative", "recursive"]
 default_keyword = "list"
 
 class BinarySearchTree:
@@ -12,6 +13,17 @@ class BinarySearchTree:
         else:
             self._root = self._Node(value)
     
+    def __iter__(self):
+        for node in self._inorder(self.root):
+            yield node.value
+            
+    def __contains__(self, value):
+        node = self.search_element(value)
+        if node is not None:
+            return True
+        else:
+            return False
+        
     @property
     def root(self):
         return self._root
@@ -19,7 +31,7 @@ class BinarySearchTree:
     @root.setter
     def root(self, value):
         self._root = value
-        
+
     @property
     def min(self):
         return self.find_min().value
@@ -32,15 +44,15 @@ class BinarySearchTree:
         if self.root is None:
             raise Exception("Binary search tree is empty")
     
-    def _check_output_type(self, output_type):
-        if not isinstance(output_type, str):
-            raise TypeError(f"Invalid type: {type(output_type)} for argument. Enter relevant 'str'" +
-                             "keywords from the list {appropriate_keywords}")
-        elif output_type not in appropriate_keywords:
-            raise Exception(f"Invalid keyword. Choose one in between the list: {appropriate_keywords}")
+    def _check_param_type(self, param_type, keyword_list):
+        if not isinstance(param_type, str):
+            raise TypeError(f"Invalid type: {type(param_type)} for argument. Enter relevant 'str'" +
+                             "keywords from the list {keyword_list}")
+        elif param_type not in keyword_list:
+            raise Exception(f"Invalid keyword. Choose one in between the list: {keyword_list}")
         
     def inorder_traversal(self, output_type="list"):
-        self._check_output_type(output_type)
+        self._check_param_type(output_type, traversal_keywords)
         self._check_empty()
         
         if output_type == "list":
@@ -59,38 +71,42 @@ class BinarySearchTree:
         yield from self._inorder(node.right_child)
     
     def preorder_traversal(self, output_type=default_keyword):
-        self._check_output_type(output_type)
+        self._check_param_type(output_type, traversal_keywords)
         self._check_empty()
         
         if output_type == "list":
-            return list(self._preorder(self.root))
-        else:
+            return list(node.value for node in self._preorder(self.root))
+        elif output_type == "print":
             for i in self._preorder(self.root):
-                print(i)
+                print(i.value)
+        elif output_type == "generator":
+            return self._preorder(self.root)
     
     def _preorder(self, node):
         if node is None:
             return
-        yield node.value
+        yield node
         yield from self._preorder(node.left_child)
         yield from self._preorder(node.right_child)
     
     def postorder_traversal(self, output_type=default_keyword):
-        self._check_output_type(output_type)
+        self._check_param_type(output_type, traversal_keywords)
         self._check_empty()
         
         if output_type == "list":
-            return list(self._postorder(self.root))
-        else:
+            return list(node.value for node in self._postorder(self.root))
+        elif output_type == "print":
             for i in self._postorder(self.root):
-                print(i)
+                print(i.value)
+        elif output_type == "generator":
+            return self._postorder(self.root)
     
     def _postorder(self, node):
         if node is None:
             return
         yield from self._postorder(node.left_child)
         yield from self._postorder(node.right_child)
-        yield node.value
+        yield node
 
     def levelorder_traversal(self):
         if self.root is None:
@@ -213,4 +229,81 @@ class BinarySearchTree:
         if return_value is True:
             return current_node.value
         return current_node
+
+    def height(self):
+        if self.root is None:
+            return 0
+        def _height(node=None):
+            if node is None:
+                return 0
+            else:
+                left_height = _height(node.left_child)
+                right_height = _height(node.right_child)
+            return max(left_height, right_height) + 1
+        return _height(self.root)
+
+    def size(self):
+        if self.root is None:
+            return 0
+        def _size(node=None):
+            if node is None:
+                return 0
+            return _size(node.left_child) + _size(node.right_child) + 1
+        return _size(self.root)
     
+    def clear(self):
+        self.root = None
+        
+    def copy(self, method="recursive"):
+        self._check_empty()
+        self._check_param_type(method, copy_keywords)
+        tree = BinarySearchTree()
+        
+        def _copy_iterative():
+            for node in self._preorder(self.root):
+                tree.insert(node.value)
+            return tree
+        
+        def _copy_recursive(node):
+            if node is None:
+                return None
+            new_node = self._Node(node.value)
+            new_node.left_child = _copy_recursive(node.left_child)
+            new_node.right_child = _copy_recursive(node.right_child)
+            return new_node
+        
+        if method == "iterative":
+            return _copy_iterative()
+        else:
+            tree.root = _copy_recursive(self.root)
+            return tree
+
+if __name__ == "__main__":
+        bst = BinarySearchTree(5)
+        bst.insert(2)
+        bst.insert(9)
+        bst.insert(1)
+        bst.insert(3)
+        bst.insert(7)
+        bst.insert(8)
+        bst.insert(13)
+
+        # print(bst.height())
+        # print(bst.size())
+        
+        # bst.clear()
+        
+        # print(bst.height())
+        # print(bst.size())
+        copy = bst.copy(method="recursive")
+        bst.insert(99)
+        bst.insert(11)
+        bst.insert(-3)
+        bst.insert(7)
+        print(bst.inorder_traversal())
+        print(bst.preorder_traversal())
+        print(bst.postorder_traversal())
+        print("============ AFTER COPY =============")
+        print(copy.inorder_traversal())
+        print(copy.preorder_traversal())
+        print(copy.postorder_traversal())
