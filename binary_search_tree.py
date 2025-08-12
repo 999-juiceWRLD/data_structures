@@ -10,20 +10,11 @@ class BinarySearchTree:
         self._Node = node
         if value is None:
             self._root = None
+            self._size = 0
         else:
             self._root = self._Node(value)
+            self._size = 1
     
-    def __iter__(self):
-        for node in self._inorder(self.root):
-            yield node.value
-            
-    def __contains__(self, value):
-        node = self.search_element(value)
-        if node is not None:
-            return True
-        else:
-            return False
-        
     @property
     def root(self):
         return self._root
@@ -40,6 +31,28 @@ class BinarySearchTree:
     def max(self):
         return self.find_max().value
     
+    @property
+    def size(self):
+        return self._size
+    
+    @property
+    def is_empty(self):
+        return self.root == None
+
+    def __len__(self):
+        return self._size
+    
+    def __iter__(self):
+        for node in self._inorder(self.root):
+            yield node.value
+            
+    def __contains__(self, value):
+        node = self.search_element(value)
+        if node is not None:
+            return True
+        else:
+            return False
+    
     def _check_empty(self):
         if self.root is None:
             raise Exception("Binary search tree is empty")
@@ -51,7 +64,7 @@ class BinarySearchTree:
         elif param_type not in keyword_list:
             raise Exception(f"Invalid keyword. Choose one in between the list: {keyword_list}")
         
-    def inorder_traversal(self, output_type="list"):
+    def inorder_traversal(self, output_type=default_keyword):
         self._check_param_type(output_type, traversal_keywords)
         self._check_empty()
         
@@ -130,12 +143,14 @@ class BinarySearchTree:
         
         if self._root is None:
             self.root = new_node
+            self._size += 1
         else:
             current_node = self.root if node is None else node
             if new_node.value >= current_node.value:
                 if current_node.right_child is None:
                     current_node.right_child = new_node
                     new_node.parent = current_node
+                    self._size += 1
                     return
                 else:
                     self.insert(new_node, current_node.right_child)
@@ -143,6 +158,7 @@ class BinarySearchTree:
                 if current_node.left_child is None:
                     current_node.left_child = new_node
                     new_node.parent = current_node
+                    self._size += 1
                     return
                 else:
                     self.insert(new_node, current_node.left_child)
@@ -181,17 +197,20 @@ class BinarySearchTree:
                 parent_node.left_child = None
             elif parent_node.right_child == node:
                 parent_node.right_child = None
+            self._size -= 1
         # deleting a node that has only one child
         elif node.left_child is None and node.right_child is not None:
             if parent_node.left_child == node:
                 parent_node.left_child = node.right_child
             else:
                 parent_node.right_child = node.right_child
+            self._size -= 1
         elif node.left_child is not None and node.right_child is None:
             if parent_node.left_child == node:
                 parent_node.left_child = node.left_child
             else:
                 parent_node.right_child = node.left_child
+            self._size -= 1
         # deleting a node with two children (using in order successor)
         else:
             in_order_successor = node.right_child
@@ -230,7 +249,7 @@ class BinarySearchTree:
             return current_node.value
         return current_node
 
-    def height(self):
+    def height(self, opt_node=None):
         if self.root is None:
             return 0
         def _height(node=None):
@@ -240,19 +259,25 @@ class BinarySearchTree:
                 left_height = _height(node.left_child)
                 right_height = _height(node.right_child)
             return max(left_height, right_height) + 1
-        return _height(self.root)
+        return _height(self.root) if opt_node == None else _height(opt_node)
 
-    def size(self):
+    def get_size(self):
         if self.root is None:
             return 0
         def _size(node=None):
             if node is None:
                 return 0
             return _size(node.left_child) + _size(node.right_child) + 1
+        ### to be removed later
+        if _size(self.root) != self._size:
+            print("get_size() fonksiyonundan dönüldü. self_size'da hata olmalı")
+            return
+        ###
         return _size(self.root)
     
     def clear(self):
         self.root = None
+        self._size = 0
         
     def copy(self, method="recursive"):
         self._check_empty()
@@ -264,46 +289,28 @@ class BinarySearchTree:
                 tree.insert(node.value)
             return tree
         
-        def _copy_recursive(node):
+        def _copy_recursive(node, parent):
             if node is None:
                 return None
             new_node = self._Node(node.value)
-            new_node.left_child = _copy_recursive(node.left_child)
-            new_node.right_child = _copy_recursive(node.right_child)
+            new_node.parent = parent
+            tree._size += 1
+            new_node.left_child = _copy_recursive(node.left_child, new_node)
+            new_node.right_child = _copy_recursive(node.right_child, new_node)
             return new_node
         
         if method == "iterative":
             return _copy_iterative()
         else:
-            tree.root = _copy_recursive(self.root)
+            tree.root = _copy_recursive(self.root, self.root.parent)
             return tree
 
-if __name__ == "__main__":
-        bst = BinarySearchTree(5)
-        bst.insert(2)
-        bst.insert(9)
-        bst.insert(1)
-        bst.insert(3)
-        bst.insert(7)
-        bst.insert(8)
-        bst.insert(13)
-
-        # print(bst.height())
-        # print(bst.size())
-        
-        # bst.clear()
-        
-        # print(bst.height())
-        # print(bst.size())
-        copy = bst.copy(method="recursive")
-        bst.insert(99)
-        bst.insert(11)
-        bst.insert(-3)
-        bst.insert(7)
-        print(bst.inorder_traversal())
-        print(bst.preorder_traversal())
-        print(bst.postorder_traversal())
-        print("============ AFTER COPY =============")
-        print(copy.inorder_traversal())
-        print(copy.preorder_traversal())
-        print(copy.postorder_traversal())
+    def is_balanced(self, node=None):
+        if node is None:
+            node = self.root
+        if not isinstance(node, TreeNode):
+            raise Exception(f"Please provide a {TreeNode} object")
+        left_subtree_height = self.height(node.left_child)
+        right_subtree_height = self.height(node.right_child)
+        return False if abs(left_subtree_height - right_subtree_height) > 1 else True
+    
