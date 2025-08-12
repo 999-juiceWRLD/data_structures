@@ -57,15 +57,22 @@ This repo contains implementations of various data structures. Each article list
 - `root`: return the root value
 - `min`: return the minimum value, using `find_min()` internally
 - `max`: return the maximum value, using `find_max()` internally
-- `inorder_traversal`: traverse the tree in-order
-- `preorder_traversal`: traverse the tree pre-order
-- `postorder_traversal`: traverse the tree post-order
-- `levelorder_traversal`: traverse each level using `QueueArray`
-- `insert()`: insert a new node into the tree
-- `search_element()`: search for an element and return `self._Node` else `None`
-- `delete_node()`: delete an element from the tree. raise `Exception` if the tree is empty
-- `find_min()`: return the node of the minimum value. if `return_value=True`, return the value of the node
-- `find_max()`: return the node of the maximum value. if `return_value=True`, return the value of the node
+- `size`: return the number of nodes in the tree
+- `is_empty`: return `True` if root is None else `False`
+- `inorder_traversal(output_type=default_keyword)`: traverse the tree in-order. as default returns a list
+- `preorder_traversal(output_type=default_keyword)`: traverse the tree pre-order. as default returns a list
+- `postorder_traversal(output_type=default_keyword)`: traverse the tree post-order. as default returns a list
+- `levelorder_traversal()`: traverse each level using `QueueArray`
+- `insert(data, node=None)`: insert a new node into the tree
+- `search_element(value, node=None)`: search for an element and return `self._Node` else `None`
+- `delete_node(value, node=None)`: delete an element from the tree. raise `Exception` if the tree is empty
+- `find_min(node=None, return_value=False)`: return the node of the minimum value. if `return_value=True`, return the value of the node
+- `find_max(node=None, return_value=False)`: return the node of the maximum value. if `return_value=True`, return the value of the node
+- `height(opt_node=None)`: return the height of the tree. if `opt_node` is `self._Node` object, then treat that object as the root node, therefore return the subtree height
+- `get_size()`: compute the number of nodes recursively.
+- `clear()`: clear the tree
+- `copy(method="recursive")`: deep copy the instance and return. if `method="iterative"` use iterative internal function.
+- `is_balanced(node=None)`: return `True` if the height of the node parameter is balanced, or `False`. if `node=None` checks for the root node.
 
 ### **To Do's**
 - Index'li fonksiyonlara `index += length` diyerek negatif index ekleme özelliği
