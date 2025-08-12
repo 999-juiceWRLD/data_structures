@@ -1,5 +1,7 @@
 import unittest
-from queues import QueueArray, LinkedQueue, CircularQueue, PriorityQueue
+from data_structures.queues import QueueArray, LinkedQueue, CircularQueue, PriorityQueue
+
+# python -m unittest test.test_queue
 
 class QueueTestMixin:
     QueueClass = None

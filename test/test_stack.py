@@ -1,5 +1,7 @@
 import unittest
-from stack import StackArray, LinkedStack
+from data_structures.stack import StackArray, LinkedStack
+
+# python -m unittest test.test_stack
 
 class StackTestMixin:
     StackClass = None  # will be set in subclasses

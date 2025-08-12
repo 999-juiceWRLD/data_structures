@@ -1,7 +1,7 @@
-from doubly_linked_list import DoublyLinkedList
+from data_structures.doubly_linked_list import DoublyLinkedList
 import unittest
 
-# python -m unittest test/test_doubly_linked_list.py
+# python -m unittest test.test_doubly_linked_list
 
 class TestDoublyLinkedList(unittest.TestCase):
     def setUp(self):

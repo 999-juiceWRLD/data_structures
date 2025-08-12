@@ -9,6 +9,7 @@ This repo contains implementations of various data structures. Each article list
 - `delete_head()`: delete the first element.
 - `delete_tail()`: delete the last element.
 - `delete_index()`: delete the element from a given index. index is checked if it's within the bounds.
+- `delete_value(value)`: delete the first occurence of the value.
 - `find_by_index()`: returns the value where the index at. index is checked if it's within the bounds.
 - `traverse()`: print each value in the list.
 
@@ -80,3 +81,4 @@ This repo contains implementations of various data structures. Each article list
 - Linked list'lere raise error testi ekle
 - Arama metodlarıda `print()` yerine `Node` döndürme?
 - Doubly linked list için `insert_index()` metodu ekle.
+- generate a document with docstrings? in this case, write docstrings first. docstring styles (google, numpy, etc)?

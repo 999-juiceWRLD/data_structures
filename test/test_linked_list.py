@@ -1,7 +1,7 @@
-from linked_list import LinkedList
+from data_structures.linked_list import LinkedList
 import unittest
 
-# python -m unittest test/test_linked_list.py
+# python -m unittest test.test_linked_list
 
 class TestLinkedList(unittest.TestCase):
     def setUp(self):
