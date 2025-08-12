@@ -23,11 +23,11 @@ class TestBinarySearchTree(unittest.TestCase):
 
     def test_check_output_type(self):
         with self.assertRaises(TypeError):
-            self.bst._check_output_type()
+            self.bst._check_param_type()
         with self.assertRaises(TypeError):
-            self.bst._check_output_type(123)
+            self.bst._check_param_type(123)
         with self.assertRaises(Exception):
-            self.bst._check_output_type("something else")
+            self.bst._check_param_type("something else")
     
     def test_inorder_traversal(self):
         # list
@@ -45,3 +45,4 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(self.bst.levelorder_traversal(), [5, 2, 9, 1, 3, 7, 13, 8])
         bst = BinarySearchTree()
         self.assertIsNone(bst.levelorder_traversal())
+    
