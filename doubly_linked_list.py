@@ -14,9 +14,10 @@ class Node(NodeCore):
         self._prev_node = value
 
 class DoublyLinkedList:
-    def __init__(self, value=None):
+    def __init__(self, value=None, node=Node):
+        self._Node = node
         if value is not None:
-            self.head_node = Node(value)
+            self.head_node = self._Node(value)
             self.tail_node = self.head_node
             self._size = 1
         else:
@@ -46,17 +47,17 @@ class DoublyLinkedList:
         
     def insert_head(self, value):
         if self._size == 0:
-            self.head_node = Node(value)
+            self.head_node = self._Node(value)
             self.tail_node = self.head_node
         else:
-            new_node = Node(value)
+            new_node = self._Node(value)
             new_node.next_node = self.head_node
             self.head_node.prev_node = new_node
             self.head_node = new_node
         self._size += 1
     
     def insert_tail(self, value):
-        new_node = Node(value)
+        new_node = self._Node(value)
         if self._size == 0:
             self.head_node = new_node
             self.tail_node = self.head_node
