@@ -1,7 +1,27 @@
+"""This file consists the linked list implementation."""
+
 from .node import NodeCore as Node
 
 class LinkedList:
+    """This is the singly linked list implementation.
+    
+    Attributes:
+        _Node (Any): This is the node object used to create a list. Custom node objects can be used. Defaults to NodeCore.
+        head_node (None or Node): The first node in the list.
+        tail_node (None or Node): The last node in the list.
+        size (int): The number of elements in the list.
+        value (Any): Value of the node.
+    """
+    
     def __init__(self, value=None, node=Node):
+        """Initialize a linked list.
+        
+        Args:
+            head_node (None or Node): The first node in the list.
+            tail_node (None or Node): The last node in the list.
+            size (int): The number of elements in the list.
+            value (Any): Value of the node.
+        """
         self._Node = node
         if value is not None:
             self.head_node = self._Node(value)
@@ -14,12 +34,15 @@ class LinkedList:
     
     @property
     def size(self):
+        """int: How many elements in the linked list."""
         return self._size
     
     def __str__(self):
+        #"""str: A string representation of nodes in the list."""
         return "[ " + " ".join(str(node) for node in self) + " ]"
     
     def __len__(self):
+        #"""int: How many elements in the linked list."""
         return self._size
     
     def __getitem__(self, index):
@@ -37,6 +60,11 @@ class LinkedList:
             current_node = current_node.next_node
         
     def insert_head(self, value):
+        """Inserts a value at head. Wraps the value inside the Node object.
+        
+        Args:
+            value (any): Value to be inserted.
+        """
         new_node = self._Node(value)
         new_node.next_node = self.head_node
         self._size += 1
@@ -45,6 +73,11 @@ class LinkedList:
             self.tail_node = new_node
         
     def insert_tail(self, value):
+        """Inserts a value at tail. Wraps the value inside the Node object.
+        
+        Args:
+            value (any): Value to be inserted.
+        """
         new_node = self._Node(value)
         if self._size == 0:
             self.head_node = new_node
@@ -55,6 +88,15 @@ class LinkedList:
         self._size += 1
     
     def insert_index(self, index, value):
+        """Insert the value inside the given index. Shifts the elements coming after that index.
+        
+        Args:
+            index (int): Index position to insert the node.
+            value (any): Value wrapped inside a Node to be inserted.
+        
+        Raises:
+            IndexError: If the `index` is out of range.
+        """
         if index < 0 or index > self._size - 1:
             raise IndexError(f"Index {index} out of bounds for insertion")
         else:
@@ -73,6 +115,11 @@ class LinkedList:
             new_node.next_node = next_node
     
     def delete_head(self):
+        """Delete the first element in the list.
+        
+        Raises:
+            Exception: If the list is empty.
+        """
         if self.head_node is None:
             raise Exception("Cannot delete from an empty list")
         second_node = self.head_node.next_node
@@ -80,6 +127,11 @@ class LinkedList:
         self.head_node = second_node
 
     def delete_tail(self):
+        """Delete the last element in the list.
+        
+        Raises:
+            Exception: If the `head_node` is None.
+        """
         if self.head_node is None:
             raise Exception("Cannot delete from an empty list")
         elif self._size == 1:
@@ -94,6 +146,14 @@ class LinkedList:
         self._size -= 1
     
     def delete_index(self, index):
+        """Delete the element at the given index.
+        
+        Args:
+            index (int): The index where the node will be deleted.
+            
+        Raises:
+            IndexError: If the `index` is out of range.
+        """
         if index < 0 or index > self._size - 1:
             raise IndexError(f"Index {index} is out of bounds for deletion - List size: {self._size}")
         current_node = self.head_node
@@ -109,6 +169,14 @@ class LinkedList:
             self._size -= 1
             
     def delete_value(self, value):
+        """Delete a node with the given value.
+        
+        Args:
+            value (any): Value that a node contains.
+        
+        Raises:
+            Exception: If the list is empty.
+        """
         current_node = self.head_node
         previous_node = None
         
@@ -127,6 +195,17 @@ class LinkedList:
         raise ValueError(f"{value} is not in the list")
                   
     def find_by_index(self, index):
+        """Find and return the value of a node of a given index.
+        
+        Args:
+            index (int): The index of the node whose value is wanted.
+            
+        Returns:
+            any: value of the node at `index`
+        
+        Raises:
+            IndexError: If the `index` is out of range.
+        """
         if index < 0:
             index += self._size
         if index > self._size - 1:
@@ -141,6 +220,7 @@ class LinkedList:
                 counter += 1
         
     def traverse(self):
+        """Traverse and print the each value in the list."""
         current_node = self.head_node
         while current_node is not None:
             print(current_node.value)
