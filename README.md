@@ -1,6 +1,6 @@
 # Implementation of Data Structures
 
-This repo contains implementations of various data structures. Each article lists the implemented features.
+This repo contains implementations of various data structures. Each article lists the implemented features. Currently trying to make this a fully functioning library where you can basically use implemented data structures as-intended. I will implement AVL & red-black trees, and hopefully graphs.
 
 ## Linked List & Doubly Linked List Common Methods
 
@@ -74,11 +74,3 @@ This repo contains implementations of various data structures. Each article list
 - `clear()`: clear the tree
 - `copy(method="recursive")`: deep copy the instance and return. if `method="iterative"` use iterative internal function.
 - `is_balanced(node=None)`: return `True` if the height of the node parameter is balanced, or `False`. if `node=None` checks for the root node.
-
-### **To Do's**
-- Index'li fonksiyonlara `index += length` diyerek negatif index ekleme özelliği
-- `__repr__` fonksiyonu ekle?
-- Linked list'lere raise error testi ekle
-- Arama metodlarıda `print()` yerine `Node` döndürme?
-- Doubly linked list için `insert_index()` metodu ekle.
-- generate a document with docstrings? in this case, write docstrings first. docstring styles (google, numpy, etc)?
