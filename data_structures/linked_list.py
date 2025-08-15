@@ -1,4 +1,4 @@
-"""This file consists the linked list implementation."""
+"""Implementation of linked list. Default node is NodeCore."""
 
 from .node import NodeCore as Node
 
@@ -14,13 +14,14 @@ class LinkedList:
     """
     
     def __init__(self, value=None, node=Node):
-        """Initialize a linked list.
+        """Initialize the `LinkedList`.
         
         Args:
             head_node (None or Node): The first node in the list.
             tail_node (None or Node): The last node in the list.
             size (int): The number of elements in the list.
             value (Any): Value of the node.
+            node (any | Node): Node container to construct a doubly linked list. Defaults to Node.
         """
         self._Node = node
         if value is not None:
@@ -38,14 +39,22 @@ class LinkedList:
         return self._size
     
     def __str__(self):
-        #"""str: A string representation of nodes in the list."""
+        """str: A string representation of nodes in the list."""
         return "[ " + " ".join(str(node) for node in self) + " ]"
     
     def __len__(self):
-        #"""int: How many elements in the linked list."""
+        """int: How many elements in the linked list."""
         return self._size
     
     def __getitem__(self, index):
+        """Make LinkedList class indexable.
+        
+        Args:
+            index (int): Index of `LinkedList` object to return the value at that position.
+        
+        Raises:
+            IndexError: If the `index` is out of range.
+        """
         if index < 0:
             index += self._size
         if not 0 <= index < self._size:
@@ -54,6 +63,7 @@ class LinkedList:
             return self.find_by_index(index)
     
     def __iter__(self):
+        """Dunder method to make `LinkedList` iterable."""
         current_node = self.head_node
         while current_node:
             yield current_node.value
@@ -176,6 +186,7 @@ class LinkedList:
         
         Raises:
             Exception: If the list is empty.
+            ValueError: If the `value` is not found in the list.
         """
         current_node = self.head_node
         previous_node = None
