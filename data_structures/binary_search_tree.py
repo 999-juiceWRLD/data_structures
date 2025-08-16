@@ -37,7 +37,7 @@ class BinarySearchTree:
     
     @property
     def is_empty(self):
-        return self.root == None
+        return self.root is None
 
     def __len__(self):
         return self._size
@@ -259,7 +259,7 @@ class BinarySearchTree:
                 left_height = _height(node.left_child)
                 right_height = _height(node.right_child)
             return max(left_height, right_height) + 1
-        return _height(self.root) if opt_node == None else _height(opt_node)
+        return _height(self.root) if opt_node is None else _height(opt_node)
 
     def get_size(self):
         if self.root is None:
