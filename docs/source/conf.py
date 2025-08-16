@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'data-structures'
+project = 'data_structures'
 copyright = '2025, Emre Kahraman CANIKOGLU'
 author = 'Emre Kahraman CANIKOGLU'
 release = '1.0.0'
@@ -14,6 +14,12 @@ release = '1.0.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.napoleon',
+    'sphinx_autodoc_typehints'
+]
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -23,39 +29,17 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 
-extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.napoleon',  # For Google-style docstrings
-    'sphinx_autodoc_typehints',
-    "sphinx_rtd_theme",
-    "sphinx.ext.githubpages",
-]
-
-# Set theme (optional but recommended)
-html_theme = 'sphinx_rtd_theme'
-html_use_relative_paths = True  # Force relative links for CSS/JS
-
-# Add your project to the Python path
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../..'))  # Adjust based on your project structure
+sys.path.insert(0, os.path.abspath("../.."))  # assuming docs/ is in project root
 
-# Autodoc settings
 autodoc_default_options = {
     'members': True,
     'member-order': 'bysource',
     'special-members': '__init__',
     'undoc-members': True,
     'exclude-members': '__weakref__'
-}
-
-import sphinx_rtd_theme
-
-html_baseurl = "https://999-juicewrld.github.io/data_structures/"
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-html_theme_options = {
-    "style_external_links": True,
 }
