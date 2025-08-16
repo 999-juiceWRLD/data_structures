@@ -48,18 +48,18 @@ autodoc_default_options = {
 }
 autosummary_generate = True
 
-import sphinx_rtd_theme
+# import sphinx_rtd_theme
 
 html_theme = "sphinx_rtd_theme"
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+# html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Make Sphinx generate correct URLs on GitHub Pages
 html_baseurl = "https://999-juicewrld.github.io/data_structures/"
-html_theme_options = {
-    "style_external_links": True,
-    "collapse_navigation": False,
-    "navigation_depth": 4,
-    "sticky_navigation": True,
-    "titles_only": False,
-}
+# html_theme_options = {
+#     "style_external_links": True,
+#     "collapse_navigation": False,
+#     "navigation_depth": 4,
+#     "sticky_navigation": True,
+#     "titles_only": False,
+# }
 html_relative_permalinks = True
