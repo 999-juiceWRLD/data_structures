@@ -14,7 +14,9 @@ release = '1.0.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    "sphinx.ext.githubpages",
+]
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -50,7 +52,10 @@ autodoc_default_options = {
     'exclude-members': '__weakref__'
 }
 
+import sphinx_rtd_theme
+
 html_baseurl = "https://999-juicewrld.github.io/data_structures/"
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 html_theme_options = {
     "style_external_links": True,
 }
