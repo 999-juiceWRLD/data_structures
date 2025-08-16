@@ -49,3 +49,8 @@ autodoc_default_options = {
     'undoc-members': True,
     'exclude-members': '__weakref__'
 }
+
+html_baseurl = "https://999-juicewrld.github.io/data_structures/"
+html_theme_options = {
+    "style_external_links": True,
+}
