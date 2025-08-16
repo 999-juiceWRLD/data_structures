@@ -36,6 +36,7 @@ extensions = [
 
 # Set theme (optional but recommended)
 html_theme = 'sphinx_rtd_theme'
+html_use_relative_paths = True  # Force relative links for CSS/JS
 
 # Add your project to the Python path
 import os
