@@ -6,8 +6,6 @@ deneysel.md
 *.pyc
 *.pyo
 *.pyd
-build/
-dist/
 *.egg-info/
 .env
 todo.md
