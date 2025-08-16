@@ -19,7 +19,7 @@ jobs:
         run: pip install pdoc
 
       - name: Build documentation
-        run: pdoc -o docs/ data_structures
+        run: pdoc --docformat=google -o docs/ data_structures
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
