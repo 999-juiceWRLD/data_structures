@@ -1,0 +1,1705 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>data_structures documentation &mdash; data_structures 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            data_structures
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">data_structures documentation</a><ul>
+<li><a class="reference internal" href="#data_structures.NodeCore"><code class="docutils literal notranslate"><span class="pre">NodeCore</span></code></a><ul>
+<li><a class="reference internal" href="#data_structures.NodeCore.value"><code class="docutils literal notranslate"><span class="pre">NodeCore.value</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.NodeCore.next_node"><code class="docutils literal notranslate"><span class="pre">NodeCore.next_node</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.NodeCore.__init__"><code class="docutils literal notranslate"><span class="pre">NodeCore.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">NodeCore.next_node</span></code></a></li>
+<li><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">NodeCore.value</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data_structures.NodePriorityQueue"><code class="docutils literal notranslate"><span class="pre">NodePriorityQueue</span></code></a><ul>
+<li><a class="reference internal" href="#data_structures.NodePriorityQueue.value"><code class="docutils literal notranslate"><span class="pre">NodePriorityQueue.value</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.NodePriorityQueue.priority"><code class="docutils literal notranslate"><span class="pre">NodePriorityQueue.priority</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.NodePriorityQueue.next_node"><code class="docutils literal notranslate"><span class="pre">NodePriorityQueue.next_node</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.NodePriorityQueue.__init__"><code class="docutils literal notranslate"><span class="pre">NodePriorityQueue.__init__()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data_structures.TreeNode"><code class="docutils literal notranslate"><span class="pre">TreeNode</span></code></a><ul>
+<li><a class="reference internal" href="#data_structures.TreeNode.__init__"><code class="docutils literal notranslate"><span class="pre">TreeNode.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.TreeNode.left_child"><code class="docutils literal notranslate"><span class="pre">TreeNode.left_child</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.TreeNode.left_value"><code class="docutils literal notranslate"><span class="pre">TreeNode.left_value</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.TreeNode.parent"><code class="docutils literal notranslate"><span class="pre">TreeNode.parent</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.TreeNode.right_child"><code class="docutils literal notranslate"><span class="pre">TreeNode.right_child</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.TreeNode.right_value"><code class="docutils literal notranslate"><span class="pre">TreeNode.right_value</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.TreeNode.value"><code class="docutils literal notranslate"><span class="pre">TreeNode.value</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data_structures.LinkedList"><code class="docutils literal notranslate"><span class="pre">LinkedList</span></code></a><ul>
+<li><a class="reference internal" href="#data_structures.LinkedList._Node"><code class="docutils literal notranslate"><span class="pre">LinkedList._Node</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.head_node"><code class="docutils literal notranslate"><span class="pre">LinkedList.head_node</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.tail_node"><code class="docutils literal notranslate"><span class="pre">LinkedList.tail_node</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.size"><code class="docutils literal notranslate"><span class="pre">LinkedList.size</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.value"><code class="docutils literal notranslate"><span class="pre">LinkedList.value</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.__init__"><code class="docutils literal notranslate"><span class="pre">LinkedList.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.delete_head"><code class="docutils literal notranslate"><span class="pre">LinkedList.delete_head()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.delete_index"><code class="docutils literal notranslate"><span class="pre">LinkedList.delete_index()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.delete_tail"><code class="docutils literal notranslate"><span class="pre">LinkedList.delete_tail()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.delete_value"><code class="docutils literal notranslate"><span class="pre">LinkedList.delete_value()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.find_by_index"><code class="docutils literal notranslate"><span class="pre">LinkedList.find_by_index()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.insert_head"><code class="docutils literal notranslate"><span class="pre">LinkedList.insert_head()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.insert_index"><code class="docutils literal notranslate"><span class="pre">LinkedList.insert_index()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.insert_tail"><code class="docutils literal notranslate"><span class="pre">LinkedList.insert_tail()</span></code></a></li>
+<li><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">LinkedList.size</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedList.traverse"><code class="docutils literal notranslate"><span class="pre">LinkedList.traverse()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data_structures.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a><ul>
+<li><a class="reference internal" href="#data_structures.Node.prev_node"><code class="docutils literal notranslate"><span class="pre">Node.prev_node</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.Node.__init__"><code class="docutils literal notranslate"><span class="pre">Node.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">Node.prev_node</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList</span></code></a><ul>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList._Node"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList._Node</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.head_node"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.head_node</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.tail_node"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.tail_node</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.size"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.size</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.value"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.value</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.__init__"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.delete_head"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.delete_head()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.delete_index"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.delete_index()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.delete_tail"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.delete_tail()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.delete_value"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.delete_value()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.find_by_index"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.find_by_index()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.find_by_value"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.find_by_value()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.insert_head"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.insert_head()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.insert_tail"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.insert_tail()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.reverse_find_by_value"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.reverse_find_by_value()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.DoublyLinkedList.traverse"><code class="docutils literal notranslate"><span class="pre">DoublyLinkedList.traverse()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data_structures.QueueArray"><code class="docutils literal notranslate"><span class="pre">QueueArray</span></code></a><ul>
+<li><a class="reference internal" href="#data_structures.QueueArray.array"><code class="docutils literal notranslate"><span class="pre">QueueArray.array</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.QueueArray.__init__"><code class="docutils literal notranslate"><span class="pre">QueueArray.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.QueueArray.clear"><code class="docutils literal notranslate"><span class="pre">QueueArray.clear()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.QueueArray.copy"><code class="docutils literal notranslate"><span class="pre">QueueArray.copy()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.QueueArray.dequeue"><code class="docutils literal notranslate"><span class="pre">QueueArray.dequeue()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.QueueArray.enqueue"><code class="docutils literal notranslate"><span class="pre">QueueArray.enqueue()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.QueueArray.front"><code class="docutils literal notranslate"><span class="pre">QueueArray.front</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.QueueArray.is_empty"><code class="docutils literal notranslate"><span class="pre">QueueArray.is_empty()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.QueueArray.rear"><code class="docutils literal notranslate"><span class="pre">QueueArray.rear</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.QueueArray.size"><code class="docutils literal notranslate"><span class="pre">QueueArray.size</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data_structures.LinkedQueue"><code class="docutils literal notranslate"><span class="pre">LinkedQueue</span></code></a><ul>
+<li><a class="reference internal" href="#data_structures.LinkedQueue.__init__"><code class="docutils literal notranslate"><span class="pre">LinkedQueue.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedQueue.clear"><code class="docutils literal notranslate"><span class="pre">LinkedQueue.clear()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedQueue.copy"><code class="docutils literal notranslate"><span class="pre">LinkedQueue.copy()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedQueue.dequeue"><code class="docutils literal notranslate"><span class="pre">LinkedQueue.dequeue()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedQueue.enqueue"><code class="docutils literal notranslate"><span class="pre">LinkedQueue.enqueue()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedQueue.front"><code class="docutils literal notranslate"><span class="pre">LinkedQueue.front</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedQueue.is_empty"><code class="docutils literal notranslate"><span class="pre">LinkedQueue.is_empty()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedQueue.rear"><code class="docutils literal notranslate"><span class="pre">LinkedQueue.rear</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data_structures.CircularQueue"><code class="docutils literal notranslate"><span class="pre">CircularQueue</span></code></a><ul>
+<li><a class="reference internal" href="#data_structures.CircularQueue.capacity"><code class="docutils literal notranslate"><span class="pre">CircularQueue.capacity</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.array"><code class="docutils literal notranslate"><span class="pre">CircularQueue.array</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.front_idx"><code class="docutils literal notranslate"><span class="pre">CircularQueue.front_idx</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.rear_idx"><code class="docutils literal notranslate"><span class="pre">CircularQueue.rear_idx</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.size"><code class="docutils literal notranslate"><span class="pre">CircularQueue.size</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.__init__"><code class="docutils literal notranslate"><span class="pre">CircularQueue.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.clear"><code class="docutils literal notranslate"><span class="pre">CircularQueue.clear()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.copy"><code class="docutils literal notranslate"><span class="pre">CircularQueue.copy()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.dequeue"><code class="docutils literal notranslate"><span class="pre">CircularQueue.dequeue()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.enqueue"><code class="docutils literal notranslate"><span class="pre">CircularQueue.enqueue()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.front"><code class="docutils literal notranslate"><span class="pre">CircularQueue.front</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.is_empty"><code class="docutils literal notranslate"><span class="pre">CircularQueue.is_empty()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.is_full"><code class="docutils literal notranslate"><span class="pre">CircularQueue.is_full()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.is_rear_idx_reached"><code class="docutils literal notranslate"><span class="pre">CircularQueue.is_rear_idx_reached()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.CircularQueue.rear"><code class="docutils literal notranslate"><span class="pre">CircularQueue.rear</span></code></a></li>
+<li><a class="reference internal" href="#id4"><code class="docutils literal notranslate"><span class="pre">CircularQueue.size</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data_structures.PriorityQueue"><code class="docutils literal notranslate"><span class="pre">PriorityQueue</span></code></a><ul>
+<li><a class="reference internal" href="#data_structures.PriorityQueue.value"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.value</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.PriorityQueue.__init__"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.PriorityQueue.clear"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.clear()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.PriorityQueue.copy"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.copy()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.PriorityQueue.dequeue"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.dequeue()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.PriorityQueue.enqueue"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.enqueue()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.PriorityQueue.front"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.front</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.PriorityQueue.is_empty"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.is_empty()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.PriorityQueue.rear"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.rear</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data_structures.StackArray"><code class="docutils literal notranslate"><span class="pre">StackArray</span></code></a><ul>
+<li><a class="reference internal" href="#data_structures.StackArray.array"><code class="docutils literal notranslate"><span class="pre">StackArray.array</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.StackArray.__init__"><code class="docutils literal notranslate"><span class="pre">StackArray.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.StackArray.clear"><code class="docutils literal notranslate"><span class="pre">StackArray.clear()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.StackArray.copy"><code class="docutils literal notranslate"><span class="pre">StackArray.copy()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.StackArray.is_empty"><code class="docutils literal notranslate"><span class="pre">StackArray.is_empty()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.StackArray.peek"><code class="docutils literal notranslate"><span class="pre">StackArray.peek()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.StackArray.pop"><code class="docutils literal notranslate"><span class="pre">StackArray.pop()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.StackArray.push"><code class="docutils literal notranslate"><span class="pre">StackArray.push()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.StackArray.size"><code class="docutils literal notranslate"><span class="pre">StackArray.size</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.StackArray.top"><code class="docutils literal notranslate"><span class="pre">StackArray.top</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data_structures.LinkedStack"><code class="docutils literal notranslate"><span class="pre">LinkedStack</span></code></a><ul>
+<li><a class="reference internal" href="#data_structures.LinkedStack.__init__"><code class="docutils literal notranslate"><span class="pre">LinkedStack.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedStack.clear"><code class="docutils literal notranslate"><span class="pre">LinkedStack.clear()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedStack.copy"><code class="docutils literal notranslate"><span class="pre">LinkedStack.copy()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedStack.is_empty"><code class="docutils literal notranslate"><span class="pre">LinkedStack.is_empty()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedStack.peek"><code class="docutils literal notranslate"><span class="pre">LinkedStack.peek()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedStack.pop"><code class="docutils literal notranslate"><span class="pre">LinkedStack.pop()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedStack.push"><code class="docutils literal notranslate"><span class="pre">LinkedStack.push()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.LinkedStack.top"><code class="docutils literal notranslate"><span class="pre">LinkedStack.top</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree</span></code></a><ul>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.__init__"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.clear"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.clear()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.copy"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.copy()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.delete_node"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.delete_node()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.find_max"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.find_max()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.find_min"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.find_min()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.get_size"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.get_size()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.height"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.height()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.inorder_traversal"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.inorder_traversal()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.insert"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.insert()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.is_balanced"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.is_balanced()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.is_empty"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.is_empty</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.levelorder_traversal"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.levelorder_traversal()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.max"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.max</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.min"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.min</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.postorder_traversal"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.postorder_traversal()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.preorder_traversal"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.preorder_traversal()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.root"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.root</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.search_element"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.search_element()</span></code></a></li>
+<li><a class="reference internal" href="#data_structures.BinarySearchTree.size"><code class="docutils literal notranslate"><span class="pre">BinarySearchTree.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">data_structures</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">data_structures documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-structures-documentation">
+<h1>data_structures documentation<a class="headerlink" href="#data-structures-documentation" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<dl class="py class" id="module-data_structures">
+<dt class="sig sig-object py" id="data_structures.NodeCore">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">data_structures.</span></span><span class="sig-name descname"><span class="pre">NodeCore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/node.html#NodeCore"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.NodeCore" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is the fundamental class that’s used &amp; inherited for linear data structures.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.NodeCore.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#data_structures.NodeCore.value" title="Link to this definition"></a></dt>
+<dd><p>Value (data) stored in node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.NodeCore.next_node">
+<span class="sig-name descname"><span class="pre">next_node</span></span><a class="headerlink" href="#data_structures.NodeCore.next_node" title="Link to this definition"></a></dt>
+<dd><p>A pointer to the next node if exists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#data_structures.Node" title="data_structures.Node">Node</a> | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.NodeCore.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/node.html#NodeCore.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.NodeCore.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize a NodeCore object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>Any</em><em>, </em><em>optional</em>) – First value to add to the list. Defaults to None.</p></li>
+<li><p><strong>next_node</strong> (<a class="reference internal" href="#data_structures.NodeCore" title="data_structures.NodeCore"><em>NodeCore</em></a><em>, </em><em>optional</em>) – Node class used to create list nodes. Defaults to Node.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">next_node</span></span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>Return the next node. If there are no next node, returns <cite>None</cite>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id1">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd><p>The stored value in the <cite>Node</cite> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_structures.NodePriorityQueue">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">data_structures.</span></span><span class="sig-name descname"><span class="pre">NodePriorityQueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/node.html#NodePriorityQueue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.NodePriorityQueue" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data_structures.NodeCore" title="data_structures.node.NodeCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeCore</span></code></a></p>
+<p>This is the base node used to construct a priority queue. Inherits the NodeCore.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.NodePriorityQueue.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#data_structures.NodePriorityQueue.value" title="Link to this definition"></a></dt>
+<dd><p>Value (data) stored in node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.NodePriorityQueue.priority">
+<span class="sig-name descname"><span class="pre">priority</span></span><a class="headerlink" href="#data_structures.NodePriorityQueue.priority" title="Link to this definition"></a></dt>
+<dd><p>Priority value for each node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.NodePriorityQueue.next_node">
+<span class="sig-name descname"><span class="pre">next_node</span></span><a class="headerlink" href="#data_structures.NodePriorityQueue.next_node" title="Link to this definition"></a></dt>
+<dd><p>Next node for the current node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#data_structures.Node" title="data_structures.Node">Node</a> | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.NodePriorityQueue.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/node.html#NodePriorityQueue.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.NodePriorityQueue.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize a NodePriorityQueue object. This is used for creating priority queues. Inherits NodeCore.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>Any</em><em>, </em><em>optional</em>) – First value to add to the list. Defaults to None.</p></li>
+<li><p><strong>next_node</strong> (<em>type</em><em>, </em><em>optional</em>) – Node class used to create list nodes. Defaults to Node.</p></li>
+<li><p><strong>priority</strong> (<em>int</em>) – The priority value for the node. This will set the position of the node in the list.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_structures.TreeNode">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">data_structures.</span></span><span class="sig-name descname"><span class="pre">TreeNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_child</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_child</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/node.html#TreeNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.TreeNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is the base node used when implementing binary search trees.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>Any</em>) – The stored value in the node.</p></li>
+<li><p><strong>left_child</strong> (<a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a><em> | </em><em>None</em>) – Left child of the current node.</p></li>
+<li><p><strong>right_child</strong> (<a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a><em> | </em><em>None</em>) – Right child of the current node.</p></li>
+<li><p><strong>parent</strong> (<a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a><em> | </em><em>None</em>) – Parent node of the current node.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.TreeNode.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_child</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_child</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/node.html#TreeNode.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.TreeNode.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize a TreeNode object. Used in data_structures.BinarySearchTree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>Any</em>) – The stored value in the node.</p></li>
+<li><p><strong>left_child</strong> (<a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a><em> | </em><em>None</em>) – Left child of the current node.</p></li>
+<li><p><strong>right_child</strong> (<a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a><em> | </em><em>None</em>) – Right child of the current node.</p></li>
+<li><p><strong>parent</strong> (<a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a><em> | </em><em>None</em>) – Parent node of the current node.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.TreeNode.left_child">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">left_child</span></span><a class="headerlink" href="#data_structures.TreeNode.left_child" title="Link to this definition"></a></dt>
+<dd><p>Returns left child the TreeNode object if exists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None | <a class="reference internal" href="#data_structures.TreeNode" title="data_structures.TreeNode">TreeNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.TreeNode.left_value">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">left_value</span></span><a class="headerlink" href="#data_structures.TreeNode.left_value" title="Link to this definition"></a></dt>
+<dd><p>Value of the left_child node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.TreeNode.parent">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#data_structures.TreeNode.parent" title="Link to this definition"></a></dt>
+<dd><p>Returns the parent node (TreeNode) object if exists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None | <a class="reference internal" href="#data_structures.TreeNode" title="data_structures.TreeNode">TreeNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.TreeNode.right_child">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">right_child</span></span><a class="headerlink" href="#data_structures.TreeNode.right_child" title="Link to this definition"></a></dt>
+<dd><p>Returns the right child TreeNode object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#data_structures.TreeNode" title="data_structures.TreeNode">TreeNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.TreeNode.right_value">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">right_value</span></span><a class="headerlink" href="#data_structures.TreeNode.right_value" title="Link to this definition"></a></dt>
+<dd><p>Value of the right_child node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.TreeNode.value">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#data_structures.TreeNode.value" title="Link to this definition"></a></dt>
+<dd><p>The stored value in the <cite>TreeNode</cite> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_structures.LinkedList">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">data_structures.</span></span><span class="sig-name descname"><span class="pre">LinkedList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node=&lt;class</span> <span class="pre">'data_structures.node.NodeCore'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/linked_list.html#LinkedList"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedList" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is the singly linked list implementation.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.LinkedList._Node">
+<span class="sig-name descname"><span class="pre">_Node</span></span><a class="headerlink" href="#data_structures.LinkedList._Node" title="Link to this definition"></a></dt>
+<dd><p>This is the node object used to create a list. Custom node objects can be used. Defaults to NodeCore.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.LinkedList.head_node">
+<span class="sig-name descname"><span class="pre">head_node</span></span><a class="headerlink" href="#data_structures.LinkedList.head_node" title="Link to this definition"></a></dt>
+<dd><p>The first node in the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None or <a class="reference internal" href="#data_structures.Node" title="data_structures.Node">Node</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.LinkedList.tail_node">
+<span class="sig-name descname"><span class="pre">tail_node</span></span><a class="headerlink" href="#data_structures.LinkedList.tail_node" title="Link to this definition"></a></dt>
+<dd><p>The last node in the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None or <a class="reference internal" href="#data_structures.Node" title="data_structures.Node">Node</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.LinkedList.size">
+<span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#data_structures.LinkedList.size" title="Link to this definition"></a></dt>
+<dd><p>The number of elements in the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.LinkedList.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#data_structures.LinkedList.value" title="Link to this definition"></a></dt>
+<dd><p>Value of the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedList.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node=&lt;class</span> <span class="pre">'data_structures.node.NodeCore'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/linked_list.html#LinkedList.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedList.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize the <cite>LinkedList</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head_node</strong> (<em>None</em><em> or </em><a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a>) – The first node in the list.</p></li>
+<li><p><strong>tail_node</strong> (<em>None</em><em> or </em><a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a>) – The last node in the list.</p></li>
+<li><p><strong>size</strong> (<em>int</em>) – The number of elements in the list.</p></li>
+<li><p><strong>value</strong> (<em>Any</em>) – Value of the node.</p></li>
+<li><p><strong>node</strong> (<em>any</em><em> | </em><a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a>) – Node container to construct a doubly linked list. Defaults to Node.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedList.delete_head">
+<span class="sig-name descname"><span class="pre">delete_head</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/linked_list.html#LinkedList.delete_head"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedList.delete_head" title="Link to this definition"></a></dt>
+<dd><p>Delete the first element in the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – If the list is empty.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedList.delete_index">
+<span class="sig-name descname"><span class="pre">delete_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/linked_list.html#LinkedList.delete_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedList.delete_index" title="Link to this definition"></a></dt>
+<dd><p>Delete the element at the given index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index where the node will be deleted.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>IndexError</strong> – If the <cite>index</cite> is out of range.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedList.delete_tail">
+<span class="sig-name descname"><span class="pre">delete_tail</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/linked_list.html#LinkedList.delete_tail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedList.delete_tail" title="Link to this definition"></a></dt>
+<dd><p>Delete the last element in the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – If the <cite>head_node</cite> is None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedList.delete_value">
+<span class="sig-name descname"><span class="pre">delete_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/linked_list.html#LinkedList.delete_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedList.delete_value" title="Link to this definition"></a></dt>
+<dd><p>Delete a node with the given value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Value that a node contains.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>Exception</strong> – If the list is empty.</p></li>
+<li><p><strong>ValueError</strong> – If the <cite>value</cite> is not found in the list.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedList.find_by_index">
+<span class="sig-name descname"><span class="pre">find_by_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/linked_list.html#LinkedList.find_by_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedList.find_by_index" title="Link to this definition"></a></dt>
+<dd><p>Find and return the value of a node of a given index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the node whose value is wanted.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>value of the node at <cite>index</cite></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>IndexError</strong> – If the <cite>index</cite> is out of range.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedList.insert_head">
+<span class="sig-name descname"><span class="pre">insert_head</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/linked_list.html#LinkedList.insert_head"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedList.insert_head" title="Link to this definition"></a></dt>
+<dd><p>Inserts a value at head. Wraps the value inside the Node object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Value to be inserted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedList.insert_index">
+<span class="sig-name descname"><span class="pre">insert_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/linked_list.html#LinkedList.insert_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedList.insert_index" title="Link to this definition"></a></dt>
+<dd><p>Insert the value inside the given index. Shifts the elements coming after that index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> (<em>int</em>) – Index position to insert the node.</p></li>
+<li><p><strong>value</strong> (<em>any</em>) – Value wrapped inside a Node to be inserted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>IndexError</strong> – If the <cite>index</cite> is out of range.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedList.insert_tail">
+<span class="sig-name descname"><span class="pre">insert_tail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/linked_list.html#LinkedList.insert_tail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedList.insert_tail" title="Link to this definition"></a></dt>
+<dd><p>Inserts a value at tail. Wraps the value inside the Node object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Value to be inserted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id2">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>How many elements in the linked list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedList.traverse">
+<span class="sig-name descname"><span class="pre">traverse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/linked_list.html#LinkedList.traverse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedList.traverse" title="Link to this definition"></a></dt>
+<dd><p>Traverse and print the each value in the list.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_structures.Node">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">data_structures.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prev_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#Node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.Node" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data_structures.NodeCore" title="data_structures.node.NodeCore"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeCore</span></code></a></p>
+<p>Base node for DoublyLinkedList. Inherits all attributes from NodeCore.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.Node.prev_node">
+<span class="sig-name descname"><span class="pre">prev_node</span></span><a class="headerlink" href="#data_structures.Node.prev_node" title="Link to this definition"></a></dt>
+<dd><p>Pointer to the previous node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None | <a class="reference internal" href="#data_structures.Node" title="data_structures.Node">Node</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.Node.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prev_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#Node.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.Node.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize a Node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>any</em>)</p></li>
+<li><p><strong>value</strong> – Value (data) stored in node.</p></li>
+<li><p><strong>next_node</strong> (<a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a><em> | </em><em>None</em>) – A pointer to the next node if exists.</p></li>
+<li><p><strong>prev_node</strong> (<a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a><em> | </em><em>None</em>) – A pointer to the previous node if exists.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id3">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prev_node</span></span><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>Return the previous node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#data_structures.Node" title="data_structures.Node">Node</a> | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">data_structures.</span></span><span class="sig-name descname"><span class="pre">DoublyLinkedList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node=&lt;class</span> <span class="pre">'data_structures.doubly_linked_list.Node'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#DoublyLinkedList"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.DoublyLinkedList" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is the doubly linked list implementation.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList._Node">
+<span class="sig-name descname"><span class="pre">_Node</span></span><a class="headerlink" href="#data_structures.DoublyLinkedList._Node" title="Link to this definition"></a></dt>
+<dd><p>This is the node object used to create a list. Custom node objects can be used. Defaults to NodeCore.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.head_node">
+<span class="sig-name descname"><span class="pre">head_node</span></span><a class="headerlink" href="#data_structures.DoublyLinkedList.head_node" title="Link to this definition"></a></dt>
+<dd><p>The first node in the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None or <a class="reference internal" href="#data_structures.Node" title="data_structures.Node">Node</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.tail_node">
+<span class="sig-name descname"><span class="pre">tail_node</span></span><a class="headerlink" href="#data_structures.DoublyLinkedList.tail_node" title="Link to this definition"></a></dt>
+<dd><p>The last node in the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None or <a class="reference internal" href="#data_structures.Node" title="data_structures.Node">Node</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.size">
+<span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#data_structures.DoublyLinkedList.size" title="Link to this definition"></a></dt>
+<dd><p>The number of elements in the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#data_structures.DoublyLinkedList.value" title="Link to this definition"></a></dt>
+<dd><p>Value of the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node=&lt;class</span> <span class="pre">'data_structures.doubly_linked_list.Node'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#DoublyLinkedList.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.DoublyLinkedList.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize the <cite>DoublyLinkedList</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head_node</strong> (<em>None</em><em> or </em><a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a>) – The first node in the list.</p></li>
+<li><p><strong>tail_node</strong> (<em>None</em><em> or </em><a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a>) – The last node in the list.</p></li>
+<li><p><strong>size</strong> (<em>int</em>) – The number of elements in the list.</p></li>
+<li><p><strong>value</strong> (<em>Any</em>) – Value of the node.</p></li>
+<li><p><strong>node</strong> (<em>any</em><em> | </em><a class="reference internal" href="#data_structures.Node" title="data_structures.Node"><em>Node</em></a>) – Node container to construct a doubly linked list. Defaults to Node.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.delete_head">
+<span class="sig-name descname"><span class="pre">delete_head</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#DoublyLinkedList.delete_head"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.DoublyLinkedList.delete_head" title="Link to this definition"></a></dt>
+<dd><p>Delete the first element in the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – If the list is empty.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.delete_index">
+<span class="sig-name descname"><span class="pre">delete_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#DoublyLinkedList.delete_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.DoublyLinkedList.delete_index" title="Link to this definition"></a></dt>
+<dd><p>Delete the element at the given index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index where the node will be deleted.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>IndexError</strong> – If the <cite>index</cite> is out of range.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.delete_tail">
+<span class="sig-name descname"><span class="pre">delete_tail</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#DoublyLinkedList.delete_tail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.DoublyLinkedList.delete_tail" title="Link to this definition"></a></dt>
+<dd><p>Delete the last element in the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – If the size is 0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.delete_value">
+<span class="sig-name descname"><span class="pre">delete_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#DoublyLinkedList.delete_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.DoublyLinkedList.delete_value" title="Link to this definition"></a></dt>
+<dd><p>Delete a node with the given value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Value that a node contains.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>Exception</strong> – If the list is empty.</p></li>
+<li><p><strong>ValueError</strong> – If the <cite>value</cite> is not found in the list.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.find_by_index">
+<span class="sig-name descname"><span class="pre">find_by_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#DoublyLinkedList.find_by_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.DoublyLinkedList.find_by_index" title="Link to this definition"></a></dt>
+<dd><p>Find and return the value of a node of a given index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the node whose value is wanted.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>value of the node at <cite>index</cite></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>IndexError</strong> – If the <cite>index</cite> is out of range.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.find_by_value">
+<span class="sig-name descname"><span class="pre">find_by_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#DoublyLinkedList.find_by_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.DoublyLinkedList.find_by_value" title="Link to this definition"></a></dt>
+<dd><p>Find the first occurence of a node by value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Value of the node.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>Exception</strong> – If the list is empty.</p></li>
+<li><p><strong>ValueError</strong> – If the <cite>value</cite> is not found in the list.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.insert_head">
+<span class="sig-name descname"><span class="pre">insert_head</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#DoublyLinkedList.insert_head"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.DoublyLinkedList.insert_head" title="Link to this definition"></a></dt>
+<dd><p>Inserts a value at head. Wraps the value inside the Node object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Value to be inserted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.insert_tail">
+<span class="sig-name descname"><span class="pre">insert_tail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#DoublyLinkedList.insert_tail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.DoublyLinkedList.insert_tail" title="Link to this definition"></a></dt>
+<dd><p>Inserts a value at tail. Wraps the value inside the Node object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Value to be inserted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.reverse_find_by_value">
+<span class="sig-name descname"><span class="pre">reverse_find_by_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#DoublyLinkedList.reverse_find_by_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.DoublyLinkedList.reverse_find_by_value" title="Link to this definition"></a></dt>
+<dd><p>Find the last occurence of the value. Starts traversing from the tail node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Value of the node.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – If the <cite>value</cite> isn’t found in the list.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.DoublyLinkedList.traverse">
+<span class="sig-name descname"><span class="pre">traverse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/doubly_linked_list.html#DoublyLinkedList.traverse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.DoublyLinkedList.traverse" title="Link to this definition"></a></dt>
+<dd><p>Traverse the list and print each value.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_structures.QueueArray">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">data_structures.</span></span><span class="sig-name descname"><span class="pre">QueueArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#QueueArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.QueueArray" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Queue data structure using basic arrays.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.QueueArray.array">
+<span class="sig-name descname"><span class="pre">array</span></span><a class="headerlink" href="#data_structures.QueueArray.array" title="Link to this definition"></a></dt>
+<dd><p>Empty array. This will contain the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.QueueArray.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#QueueArray.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.QueueArray.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize a QueueArray.</p>
+<p>The constructor will accept a variable number of elements and enqueue each
+element into the array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>*args</strong> – Variable length argument list. Those are basically elements to be stored.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.QueueArray.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#QueueArray.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.QueueArray.clear" title="Link to this definition"></a></dt>
+<dd><p>Clears the whole array of the QueueArray.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.QueueArray.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#QueueArray.copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.QueueArray.copy" title="Link to this definition"></a></dt>
+<dd><p>Return a deep copy of the QueueArray object with the same values in the same order.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.QueueArray.dequeue">
+<span class="sig-name descname"><span class="pre">dequeue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#QueueArray.dequeue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.QueueArray.dequeue" title="Link to this definition"></a></dt>
+<dd><p>Dequeue the element from the array.</p>
+<p>Since this operation is using <cite>.pop(0)</cite>, it has O(n) time complexity because
+all the values in the array is shifted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Value to be dequeued.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.QueueArray.enqueue">
+<span class="sig-name descname"><span class="pre">enqueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#QueueArray.enqueue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.QueueArray.enqueue" title="Link to this definition"></a></dt>
+<dd><p>Enqueue the element inside the array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Value to be enqueued.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.QueueArray.front">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">front</span></span><a class="headerlink" href="#data_structures.QueueArray.front" title="Link to this definition"></a></dt>
+<dd><p>The value at front if the queue is not empty. Otherwise None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.QueueArray.is_empty">
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#QueueArray.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.QueueArray.is_empty" title="Link to this definition"></a></dt>
+<dd><p>bool: Return True if the size is 0, else False.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.QueueArray.rear">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rear</span></span><a class="headerlink" href="#data_structures.QueueArray.rear" title="Link to this definition"></a></dt>
+<dd><p>The value at the rear if the queue is not empty. Otherwise None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.QueueArray.size">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#data_structures.QueueArray.size" title="Link to this definition"></a></dt>
+<dd><p>Size of the array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_structures.LinkedQueue">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">data_structures.</span></span><span class="sig-name descname"><span class="pre">LinkedQueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#LinkedQueue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedQueue" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data_structures.LinkedList" title="data_structures.linked_list.LinkedList"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkedList</span></code></a></p>
+<p>A queue that’s using LinkedList object.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedQueue.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#LinkedQueue.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedQueue.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize a queue based on linked list data structure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>*values</strong> (<em>List</em>) – Variable length argument list. Those are the elements to be stored in the linked queue.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedQueue.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#LinkedQueue.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedQueue.clear" title="Link to this definition"></a></dt>
+<dd><p>Clears the whole array of the LinkedQueue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – If the list is empty.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedQueue.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#LinkedQueue.copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedQueue.copy" title="Link to this definition"></a></dt>
+<dd><p>Returns a deep copy of the LinkedQueue object with the same values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedQueue.dequeue">
+<span class="sig-name descname"><span class="pre">dequeue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#LinkedQueue.dequeue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedQueue.dequeue" title="Link to this definition"></a></dt>
+<dd><p>Dequeue an element from the linked queue.</p>
+<p>This method uses the <cite>insert_tail(value)</cite> method from the LinkedList.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – If the list is empty.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedQueue.enqueue">
+<span class="sig-name descname"><span class="pre">enqueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#LinkedQueue.enqueue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedQueue.enqueue" title="Link to this definition"></a></dt>
+<dd><p>Enqueue an element inside the linked queue.</p>
+<p>This method uses the <cite>insert_tail(value)</cite> method from the LinkedList.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Value to insert.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.LinkedQueue.front">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">front</span></span><a class="headerlink" href="#data_structures.LinkedQueue.front" title="Link to this definition"></a></dt>
+<dd><p>The value at front if the linked queue is not empty. Otherwise None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedQueue.is_empty">
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#LinkedQueue.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedQueue.is_empty" title="Link to this definition"></a></dt>
+<dd><p>bool: Return True if the size is 0, else False.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.LinkedQueue.rear">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rear</span></span><a class="headerlink" href="#data_structures.LinkedQueue.rear" title="Link to this definition"></a></dt>
+<dd><p>The value at rear if the linked queue is not empty. Otherwise None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_structures.CircularQueue">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">data_structures.</span></span><span class="sig-name descname"><span class="pre">CircularQueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#CircularQueue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.CircularQueue" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Circular queue implementation to handle empty space problem at the front.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><a class="headerlink" href="#data_structures.CircularQueue.capacity" title="Link to this definition"></a></dt>
+<dd><p>Capacity of the circular queue. Default size is 50.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.array">
+<span class="sig-name descname"><span class="pre">array</span></span><a class="headerlink" href="#data_structures.CircularQueue.array" title="Link to this definition"></a></dt>
+<dd><p>The list to be behaved as a circular queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.front_idx">
+<span class="sig-name descname"><span class="pre">front_idx</span></span><a class="headerlink" href="#data_structures.CircularQueue.front_idx" title="Link to this definition"></a></dt>
+<dd><p>Index of the front value of the array. -1 if the array is empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.rear_idx">
+<span class="sig-name descname"><span class="pre">rear_idx</span></span><a class="headerlink" href="#data_structures.CircularQueue.rear_idx" title="Link to this definition"></a></dt>
+<dd><p>Index of the rear value of the array. -1 if the array is empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.size">
+<span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#data_structures.CircularQueue.size" title="Link to this definition"></a></dt>
+<dd><p>Size of the circular array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#CircularQueue.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.CircularQueue.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize a CircularQueue object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>capacity</strong> (<em>int</em>) – Capacity of the circular queue. Default size is 50.</p></li>
+<li><p><strong>array</strong> (<em>List</em><em>[</em><em>any</em><em>]</em>) – The list to be behaved as a circular queue.</p></li>
+<li><p><strong>front_idx</strong> (<em>int</em>) – Index of the front value of the array. -1 if the array is empty.</p></li>
+<li><p><strong>rear_idx</strong> (<em>int</em>) – Index of the rear value of the array. -1 if the array is empty.</p></li>
+<li><p><strong>size</strong> (<em>int</em>) – Size of the circular array.</p></li>
+<li><p><strong>*values</strong> (<em>List</em>) – Variable length argument list. Those are the elements to be stored in the linked queue.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#CircularQueue.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.CircularQueue.clear" title="Link to this definition"></a></dt>
+<dd><p>Clears the whole CircularQueue object.</p>
+<p>Creates the default array representation. Reset the front and rear indices, set the size to 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#CircularQueue.copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.CircularQueue.copy" title="Link to this definition"></a></dt>
+<dd><p>Return a deep copy of the CircularQueue object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.dequeue">
+<span class="sig-name descname"><span class="pre">dequeue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#CircularQueue.dequeue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.CircularQueue.dequeue" title="Link to this definition"></a></dt>
+<dd><p>Dequeue an element from the CircularQueue.</p>
+<p>Using the modular arithmetics, front and rear indices are updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – If the circular queue is empty.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.enqueue">
+<span class="sig-name descname"><span class="pre">enqueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#CircularQueue.enqueue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.CircularQueue.enqueue" title="Link to this definition"></a></dt>
+<dd><p>Enqueue data for a circular queue.</p>
+<p>This is a manual implementation instead of using %. Each time a new insertion is
+made, the front_idx and rear_idx changes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – To enqueue inside the CircularQueue.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – If the CircularQueue is full.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.front">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">front</span></span><a class="headerlink" href="#data_structures.CircularQueue.front" title="Link to this definition"></a></dt>
+<dd><p>The value at front if the circular queue is not empty. Otherwise None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.is_empty">
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#CircularQueue.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.CircularQueue.is_empty" title="Link to this definition"></a></dt>
+<dd><p>bool: Return True if the size is 0, else False.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.is_full">
+<span class="sig-name descname"><span class="pre">is_full</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#CircularQueue.is_full"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.CircularQueue.is_full" title="Link to this definition"></a></dt>
+<dd><p>bool: Return True if the queue is full capacity, else False.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.is_rear_idx_reached">
+<span class="sig-name descname"><span class="pre">is_rear_idx_reached</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#CircularQueue.is_rear_idx_reached"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.CircularQueue.is_rear_idx_reached" title="Link to this definition"></a></dt>
+<dd><p>bool: Return True if the <cite>rear_idx</cite> reached at the end, else False.</p>
+<p>This is used to check if the rear_idx should be jumped to the front of the circular queue.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.CircularQueue.rear">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rear</span></span><a class="headerlink" href="#data_structures.CircularQueue.rear" title="Link to this definition"></a></dt>
+<dd><p>The value at rear if the circular queue is not empty. Otherwise None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id4">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>Size of the array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_structures.PriorityQueue">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">data_structures.</span></span><span class="sig-name descname"><span class="pre">PriorityQueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#PriorityQueue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.PriorityQueue" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data_structures.LinkedList" title="data_structures.linked_list.LinkedList"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkedList</span></code></a></p>
+<p>Implementation of priority queue, where queue is made up of linked lists with priority levels.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.PriorityQueue.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#data_structures.PriorityQueue.value" title="Link to this definition"></a></dt>
+<dd><p>Value of the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.PriorityQueue.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#PriorityQueue.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.PriorityQueue.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize a PriorityQueue object.</p>
+<p>This is used a specialized node class called <cite>NodePriorityQueue</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Any</em>) – Value of the node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.PriorityQueue.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#PriorityQueue.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.PriorityQueue.clear" title="Link to this definition"></a></dt>
+<dd><p>Clear the whole PriorityQueue object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.PriorityQueue.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#PriorityQueue.copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.PriorityQueue.copy" title="Link to this definition"></a></dt>
+<dd><p>Return a deep copy of the current PriorityQueue object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.PriorityQueue.dequeue">
+<span class="sig-name descname"><span class="pre">dequeue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#PriorityQueue.dequeue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.PriorityQueue.dequeue" title="Link to this definition"></a></dt>
+<dd><p>Dequeue the element (remove the head node from the list).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – If the priority queue is empty.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.PriorityQueue.enqueue">
+<span class="sig-name descname"><span class="pre">enqueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#PriorityQueue.enqueue"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.PriorityQueue.enqueue" title="Link to this definition"></a></dt>
+<dd><p>Enqueue the element inside the linked queue.</p>
+<p>First, a value is wrapped inside the node object. If there’s a node with a higher priority,
+it’s inserted to front. The nodes with the same priority level are behaved like a regular queue (FIFO).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>any</em>) – Value to be enqueued.</p></li>
+<li><p><strong>priority</strong> (<em>int</em>) – Priority level</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.PriorityQueue.front">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">front</span></span><a class="headerlink" href="#data_structures.PriorityQueue.front" title="Link to this definition"></a></dt>
+<dd><p>Return the value at the front of the queue, or None if empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.PriorityQueue.is_empty">
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/queues.html#PriorityQueue.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.PriorityQueue.is_empty" title="Link to this definition"></a></dt>
+<dd><p>bool: Return True if the size is 0, else False.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.PriorityQueue.rear">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rear</span></span><a class="headerlink" href="#data_structures.PriorityQueue.rear" title="Link to this definition"></a></dt>
+<dd><p>The value at front (tail node’s value of the linked list) if the queue is not empty. Otherwise None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_structures.StackArray">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">data_structures.</span></span><span class="sig-name descname"><span class="pre">StackArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#StackArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.StackArray" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Stack data structure using an array.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_structures.StackArray.array">
+<span class="sig-name descname"><span class="pre">array</span></span><a class="headerlink" href="#data_structures.StackArray.array" title="Link to this definition"></a></dt>
+<dd><p>Empty array. This will contain the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.StackArray.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#StackArray.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.StackArray.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize a <cite>StackArray</cite> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>*args</strong> – Variable length argument list. Those are basically the elements to be stored.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.StackArray.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#StackArray.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.StackArray.clear" title="Link to this definition"></a></dt>
+<dd><p>Clear the whole <cite>StackArray</cite> object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.StackArray.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#StackArray.copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.StackArray.copy" title="Link to this definition"></a></dt>
+<dd><p>Return a deep copy of the <cite>StackArray</cite> object.</p>
+<p>The <cite>*self.array</cite> unpacks elements into a new stack.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.StackArray.is_empty">
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#StackArray.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.StackArray.is_empty" title="Link to this definition"></a></dt>
+<dd><p>bool: Return True if the size is 0. Otherwise False.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.StackArray.peek">
+<span class="sig-name descname"><span class="pre">peek</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#StackArray.peek"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.StackArray.peek" title="Link to this definition"></a></dt>
+<dd><p>Return the top element without popping the element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>IndexError</strong> – If the stack is empty.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.StackArray.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#StackArray.pop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.StackArray.pop" title="Link to this definition"></a></dt>
+<dd><p>Pop an element from the stack.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>IndexError</strong> – If the stack is empty.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.StackArray.push">
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#StackArray.push"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.StackArray.push" title="Link to this definition"></a></dt>
+<dd><p>Push an element into the stack.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Value to be inserted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.StackArray.size">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#data_structures.StackArray.size" title="Link to this definition"></a></dt>
+<dd><p>Size of the array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.StackArray.top">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">top</span></span><a class="headerlink" href="#data_structures.StackArray.top" title="Link to this definition"></a></dt>
+<dd><p>The value at the top. Otherwise None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_structures.LinkedStack">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">data_structures.</span></span><span class="sig-name descname"><span class="pre">LinkedStack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#LinkedStack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedStack" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#data_structures.LinkedList" title="data_structures.linked_list.LinkedList"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkedList</span></code></a></p>
+<p>This is the stack implementation using linked lists. It has all the functionality a <cite>LinkedList</cite> has.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedStack.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#LinkedStack.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedStack.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize a <cite>LinkedStack</cite> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>*values</strong> – Variable length argument list. Those are basically the elements to be stored.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedStack.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#LinkedStack.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedStack.clear" title="Link to this definition"></a></dt>
+<dd><p>Clear the whole <cite>LinkedArray</cite> object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedStack.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#LinkedStack.copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedStack.copy" title="Link to this definition"></a></dt>
+<dd><p>Return a deep copy of the <cite>LinkedStack</cite> object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedStack.is_empty">
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#LinkedStack.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedStack.is_empty" title="Link to this definition"></a></dt>
+<dd><p>bool: Return True if the size is 0. Otherwise False.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedStack.peek">
+<span class="sig-name descname"><span class="pre">peek</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#LinkedStack.peek"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedStack.peek" title="Link to this definition"></a></dt>
+<dd><p>Return the top element without popping the element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>IndexError</strong> – If the stack is empty.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedStack.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#LinkedStack.pop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedStack.pop" title="Link to this definition"></a></dt>
+<dd><p>Pop an element from the stack.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – If the stack is empty.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.LinkedStack.push">
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/stack.html#LinkedStack.push"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.LinkedStack.push" title="Link to this definition"></a></dt>
+<dd><p>Push an element into the stack.</p>
+<p>Since it’s using a linked list, this method is inserting the value to the head of the list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – Value to be inserted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.LinkedStack.top">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">top</span></span><a class="headerlink" href="#data_structures.LinkedStack.top" title="Link to this definition"></a></dt>
+<dd><p>The value at the top. Otherwise None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">data_structures.</span></span><span class="sig-name descname"><span class="pre">BinarySearchTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node=&lt;class</span> <span class="pre">'data_structures.node.TreeNode'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node=&lt;class</span> <span class="pre">'data_structures.node.TreeNode'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.clear" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'recursive'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.copy" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.delete_node">
+<span class="sig-name descname"><span class="pre">delete_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.delete_node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.delete_node" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.find_max">
+<span class="sig-name descname"><span class="pre">find_max</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.find_max"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.find_max" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.find_min">
+<span class="sig-name descname"><span class="pre">find_min</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.find_min"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.find_min" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.get_size">
+<span class="sig-name descname"><span class="pre">get_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.get_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.get_size" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.height">
+<span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opt_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.height"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.height" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.inorder_traversal">
+<span class="sig-name descname"><span class="pre">inorder_traversal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'list'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.inorder_traversal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.inorder_traversal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.insert">
+<span class="sig-name descname"><span class="pre">insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.insert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.insert" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.is_balanced">
+<span class="sig-name descname"><span class="pre">is_balanced</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.is_balanced"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.is_balanced" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.is_empty">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_empty</span></span><a class="headerlink" href="#data_structures.BinarySearchTree.is_empty" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.levelorder_traversal">
+<span class="sig-name descname"><span class="pre">levelorder_traversal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.levelorder_traversal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.levelorder_traversal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.max">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#data_structures.BinarySearchTree.max" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.min">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#data_structures.BinarySearchTree.min" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.postorder_traversal">
+<span class="sig-name descname"><span class="pre">postorder_traversal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'list'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.postorder_traversal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.postorder_traversal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.preorder_traversal">
+<span class="sig-name descname"><span class="pre">preorder_traversal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'list'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.preorder_traversal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.preorder_traversal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.root">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">root</span></span><a class="headerlink" href="#data_structures.BinarySearchTree.root" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.search_element">
+<span class="sig-name descname"><span class="pre">search_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_structures/binary_search_tree.html#BinarySearchTree.search_element"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#data_structures.BinarySearchTree.search_element" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="data_structures.BinarySearchTree.size">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#data_structures.BinarySearchTree.size" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Emre Kahraman CANIKOGLU.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
