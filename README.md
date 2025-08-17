@@ -1,6 +1,6 @@
 # `pyds-fundamental`: An Implementation of Data Structures
 
-`pyds-fundamental`/ `data_structures` contains implementations of various data structures. 
+`pyds-fundamental` / `data_structures` contains implementations of various data structures. 
 
 Currently trying to make this a fully functioning library where you can basically use implemented data structures as-intended. I will implement AVL & red-black trees, and hopefully graphs.
 
