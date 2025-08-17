@@ -13,3 +13,4 @@ dist/
 todo.md
 venv/
 .ruff_cache
+secret.txt
