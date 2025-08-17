@@ -12,3 +12,4 @@ dist/
 .env
 todo.md
 venv/
+.ruff_cache
