@@ -3,7 +3,7 @@ requires = ["setuptools>=64.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "data-structures"
+name = "pyds-fundamental"
 version = "0.1.0"
 description = "Production-ready implementation of fundamental data structures implemented in Python"
 authors = [
