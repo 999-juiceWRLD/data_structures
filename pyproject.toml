@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyds-fundamental"
-version = "0.1.0"
+version = "0.1.1"
 description = "Production-ready implementation of fundamental data structures implemented in Python"
 authors = [
     { name = "Emre Kahraman CANIKOGLU", email = "ankaraunifedaisi@gmail.com" }
