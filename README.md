@@ -1,6 +1,10 @@
-# Implementation of Data Structures
+# `pyds-fundamental`: An Implementation of Data Structures
 
-This repo contains implementations of various data structures. Trying to make this a fully functioning library where you can basically use implemented data structures as-intended. I will implement AVL & red-black trees, and hopefully graphs.
+`pyds-fundamental`/ `data_structures` contains implementations of various data structures. 
+
+Currently trying to make this a fully functioning library where you can basically use implemented data structures as-intended. I will implement AVL & red-black trees, and hopefully graphs.
+
+To see all the functionalities, check out the [document here.](https://999-juicewrld.github.io/data_structures/data_structures.html)
 
 To download this package, go to terminal:
 ```sh
@@ -29,5 +33,3 @@ Current data structures are:
 - Stacks
 - Queues
 - Binary Search Tree
-
-To see all the functionalities, check out the [document here.](https://999-juicewrld.github.io/data_structures/data_structures.html)
