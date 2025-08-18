@@ -14,3 +14,4 @@ todo.md
 venv/
 .ruff_cache
 secret.txt
+avl_tree.py
