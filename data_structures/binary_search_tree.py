@@ -4,7 +4,7 @@ from .queues import QueueArray
 traversal_keywords = ["print", "list", "generator"]
 copy_keywords = ["iterative", "recursive"]
 default_keyword = "list"
-
+_sentinel = object()
 
 class BinarySearchTree:
     def __init__(self, value=None, node=TreeNode):
@@ -45,7 +45,7 @@ class BinarySearchTree:
 
     def __iter__(self):
         for node in self._inorder(self.root):
-            yield node.value
+            yield node
 
     def __contains__(self, value):
         node = self.search_element(value)
@@ -149,6 +149,7 @@ class BinarySearchTree:
         if self._root is None:
             self.root = new_node
             self._size += 1
+            return new_node
         else:
             current_node = self.root if node is None else node
             if new_node.value >= current_node.value:
@@ -156,18 +157,44 @@ class BinarySearchTree:
                     current_node.right_child = new_node
                     new_node.parent = current_node
                     self._size += 1
-                    return
+                    return new_node
                 else:
-                    self.insert(new_node, current_node.right_child)
+                    return self.insert(new_node, current_node.right_child)
             else:
                 if current_node.left_child is None:
                     current_node.left_child = new_node
                     new_node.parent = current_node
                     self._size += 1
-                    return
+                    return new_node
                 else:
-                    self.insert(new_node, current_node.left_child)
+                    return self.insert(new_node, current_node.left_child)
+    
+    def insert_iterative(self, data):
+        if not isinstance(data, self._Node):
+            new_node = self._Node(data)
+        else:
+            new_node = data
 
+        if self.root is None:
+            self.root = new_node
+            self._size += 1
+            return new_node
+        else:
+            current_node = self.root
+            while True:
+                if new_node.value >= current_node.value:
+                    if current_node.right_child is None:
+                        current_node.right_child = new_node
+                        new_node.parent = current_node
+                        return new_node
+                    current_node = current_node.right_child
+                elif new_node.value < current_node.value:
+                    if current_node.left_child is None:
+                        current_node.left_child = new_node
+                        new_node.parent = current_node
+                        return new_node
+                    current_node = current_node.left_child
+        
     def search_element(self, value, node=None):
         if not isinstance(value, self._Node):
             searched_node = self._Node(value)
@@ -191,7 +218,7 @@ class BinarySearchTree:
 
     def delete_node(self, value, node=None):
         if node is None:
-            node = self.search_element(value, node=node)
+            node = self.search_element(value, node=node) # returns None if element couldn't be found
         if node is None:
             raise Exception(f"{value} does not exist in the tree")
 
@@ -230,6 +257,58 @@ class BinarySearchTree:
             # will take O(1) time.
             self.delete_node(in_order_successor.value, in_order_successor)
 
+    def delete_iterative(self, value):
+        node = self._root
+        parent_node = None
+        
+        while node is not None and node.value != value:
+            parent_node = node
+            if node.value > value:
+                node = node.left_child
+            else:
+                node = node.right_child
+        
+        if node is None:
+            raise Exception(f"{value} is not found in the tree")
+        
+        # deleting a node that has no children
+        if node.left_child is None and node.right_child is None:
+            if parent_node is None:
+                self.root = None
+            elif parent_node.left_child == node:
+                parent_node.left_child = None
+            elif parent_node.right_child == node:
+                parent_node.right_child = None
+            self._size -= 1
+        # deleting a node that has only one child
+        elif node.left_child is None or node.right_child is None:
+            child_node = node.left_child if node.left_child else node.right_child
+            if parent_node is None:
+                self.root = child_node
+            elif parent_node.left_child == node:
+                parent_node.left_child = child_node
+            else:
+                parent_node.right_child = child_node
+            if child_node:
+                child_node.parent = parent_node
+        # deleting a node with two children (using in order successor)
+        else:
+            successor_parent = node
+            successor = node.right_child
+            while successor.left_child is not None:
+                successor_parent = successor
+                successor = successor.left_child
+            
+            node.value = successor.value
+            if successor_parent.left_child == successor:
+                successor_parent.left_child = successor.right_child
+            else:
+                successor_parent.right_child = successor.right_child
+            
+            if successor.right_child:  # Update parent if successor had a right child
+                successor.right_child.parent = successor_parent
+            self._size -= 1
+            
     def find_min(self, node=None, return_value=False):
         self._check_empty()
         if node is None:
@@ -254,19 +333,15 @@ class BinarySearchTree:
             return current_node.value
         return current_node
 
-    def height(self, opt_node=None):
-        if self.root is None:
+    def height(self, opt_node=_sentinel):
+        if opt_node is _sentinel:
+            return self.height(self.root)
+        if opt_node is None:
             return 0
-
-        def _height(node=None):
-            if node is None:
-                return 0
-            else:
-                left_height = _height(node.left_child)
-                right_height = _height(node.right_child)
+        else:
+            left_height = self.height(opt_node.left_child)
+            right_height = self.height(opt_node.right_child)
             return max(left_height, right_height) + 1
-
-        return _height(self.root) if opt_node is None else _height(opt_node)
 
     def get_size(self):
         if self.root is None:
@@ -322,3 +397,57 @@ class BinarySearchTree:
         left_subtree_height = self.height(node.left_child)
         right_subtree_height = self.height(node.right_child)
         return False if abs(left_subtree_height - right_subtree_height) > 1 else True
+
+    def pretty_print(self):
+        """Prints the tree in a visually appealing way in the terminal."""
+        if self._root is None:
+            print("(empty tree)")
+            return
+        
+        lines, *_ = self._pretty_print_helper(self._root)
+        for line in lines:
+            print(line)
+
+    def _pretty_print_helper(self, node):
+        """Returns list of strings, width, height, and horizontal coordinate of the root."""
+        if node._right_child is None and node._left_child is None:
+            line = str(node._value)
+            width = len(line)
+            height = 1
+            middle = width // 2
+            return [line], width, height, middle
+
+        # Only left child
+        if node._right_child is None:
+            lines, n, p, x = self._pretty_print_helper(node._left_child)
+            s = str(node._value)
+            u = len(s)
+            first_line = (x + 1) * ' ' + (n - x - 1) * '_' + s
+            second_line = x * ' ' + '/' + (n - x - 1 + u) * ' '
+            shifted_lines = [line + u * ' ' for line in lines]
+            return [first_line, second_line] + shifted_lines, n + u, p + 2, n + u // 2
+
+        # Only right child
+        if node._left_child is None:
+            lines, n, p, x = self._pretty_print_helper(node._right_child)
+            s = str(node._value)
+            u = len(s)
+            first_line = s + x * '_' + (n - x) * ' '
+            second_line = (u + x) * ' ' + '\\' + (n - x - 1) * ' '
+            shifted_lines = [u * ' ' + line for line in lines]
+            return [first_line, second_line] + shifted_lines, n + u, p + 2, u // 2
+
+        # Two children
+        left, n, p, x = self._pretty_print_helper(node._left_child)
+        right, m, q, y = self._pretty_print_helper(node._right_child)
+        s = str(node._value)
+        u = len(s)
+        first_line = (x + 1) * ' ' + (n - x - 1) * '_' + s + y * '_' + (m - y) * ' '
+        second_line = x * ' ' + '/' + (n - x - 1 + u + y) * ' ' + '\\' + (m - y - 1) * ' '
+        if p < q:
+            left += [n * ' '] * (q - p)
+        elif q < p:
+            right += [m * ' '] * (p - q)
+        zipped_lines = zip(left, right)
+        lines = [first_line, second_line] + [a + u * ' ' + b for a, b in zipped_lines]
+        return lines, n + m + u, max(p, q) + 2, n + u // 2
