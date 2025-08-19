@@ -216,6 +216,20 @@ class BinarySearchTree:
                     return None
                 return self.search_element(searched_node, current_node.right_child)
 
+    def search_iterative(self, value):
+        if self._root is None:
+            raise Exception("Binary search tree is empty")
+        current_node = self.root
+        while current_node is not None:
+            if current_node.value == value:
+                return current_node
+            elif current_node.value >= value:
+                current_node = current_node.left_child
+            else:
+                current_node = current_node.right_child
+        raise Exception(f"Value {value} is not found")
+        
+        
     def delete_node(self, value, node=None):
         if node is None:
             node = self.search_element(value, node=node) # returns None if element couldn't be found
