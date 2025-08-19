@@ -43,14 +43,13 @@ for node in bst.inorder_traversal():
 # 12
 # 16
 
-```py
 import random
     bst = AVLTree()
     for _ in range(20):
         bst.insert(random.randint(0, 100))
     bst.pretty_print()
 
-# Output is:
+# Output:
 
            ________59___________     
           /                     \    
