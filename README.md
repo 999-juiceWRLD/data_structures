@@ -44,10 +44,11 @@ for node in bst.inorder_traversal():
 # 16
 
 import random
-    bst = AVLTree()
-    for _ in range(20):
-        bst.insert(random.randint(0, 100))
-    bst.pretty_print()
+
+avl = AVLTree()
+for _ in range(20):
+    avl.insert(random.randint(0, 100))
+avl.pretty_print()
 
 # Output:
 
