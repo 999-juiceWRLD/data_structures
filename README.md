@@ -20,7 +20,7 @@ Current data structures are:
     - Priority Qeueue (Using Linked List)
 - Binary Search Tree
 
-**Currently Working On:** *AVL-Trees.*
+**Currently Working On:** *Red-Black Trees.*
 
 To download this package, go to terminal:
 ```sh
