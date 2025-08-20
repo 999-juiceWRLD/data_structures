@@ -126,17 +126,17 @@ class BinarySearchTree:
         yield from self._postorder(node.right_child)
         yield node
 
-    def levelorder_traversal(self):
-        if self.root is None:
-            return None
+    def levelorder_traversal(self, none_value=None):
+        if self.root is none_value:
+            return none_value
         queue = QueueArray(self.root)
         result = []
         while queue.size != 0:
             current_node = queue.dequeue()
             result.append(current_node.value)
-            if current_node.left_child is not None:
+            if current_node.left_child is not none_value:
                 queue.enqueue(current_node.left_child)
-            if current_node.right_child is not None:
+            if current_node.right_child is not none_value:
                 queue.enqueue(current_node.right_child)
         return result
 
@@ -186,12 +186,14 @@ class BinarySearchTree:
                     if current_node.right_child is None:
                         current_node.right_child = new_node
                         new_node.parent = current_node
+                        self._size += 1
                         return new_node
                     current_node = current_node.right_child
                 elif new_node.value < current_node.value:
                     if current_node.left_child is None:
                         current_node.left_child = new_node
                         new_node.parent = current_node
+                        self._size += 1
                         return new_node
                     current_node = current_node.left_child
         
@@ -412,19 +414,19 @@ class BinarySearchTree:
         right_subtree_height = self.height(node.right_child)
         return False if abs(left_subtree_height - right_subtree_height) > 1 else True
 
-    def pretty_print(self):
+    def pretty_print(self, none_value=None):
         """Prints the tree in a visually appealing way in the terminal."""
-        if self._root is None:
+        if self._root is none_value:
             print("(empty tree)")
             return
         
-        lines, *_ = self._pretty_print_helper(self._root)
+        lines, *_ = self._pretty_print_helper(self._root, none_value)
         for line in lines:
             print(line)
 
-    def _pretty_print_helper(self, node):
+    def _pretty_print_helper(self, node, none_value=None):
         """Returns list of strings, width, height, and horizontal coordinate of the root."""
-        if node._right_child is None and node._left_child is None:
+        if node._right_child is none_value and node._left_child is none_value:
             line = str(node._value)
             width = len(line)
             height = 1
@@ -432,8 +434,8 @@ class BinarySearchTree:
             return [line], width, height, middle
 
         # Only left child
-        if node._right_child is None:
-            lines, n, p, x = self._pretty_print_helper(node._left_child)
+        if node._right_child is none_value:
+            lines, n, p, x = self._pretty_print_helper(node._left_child, none_value)
             s = str(node._value)
             u = len(s)
             first_line = (x + 1) * ' ' + (n - x - 1) * '_' + s
@@ -442,8 +444,8 @@ class BinarySearchTree:
             return [first_line, second_line] + shifted_lines, n + u, p + 2, n + u // 2
 
         # Only right child
-        if node._left_child is None:
-            lines, n, p, x = self._pretty_print_helper(node._right_child)
+        if node._left_child is none_value:
+            lines, n, p, x = self._pretty_print_helper(node._right_child, none_value)
             s = str(node._value)
             u = len(s)
             first_line = s + x * '_' + (n - x) * ' '
@@ -452,8 +454,8 @@ class BinarySearchTree:
             return [first_line, second_line] + shifted_lines, n + u, p + 2, u // 2
 
         # Two children
-        left, n, p, x = self._pretty_print_helper(node._left_child)
-        right, m, q, y = self._pretty_print_helper(node._right_child)
+        left, n, p, x = self._pretty_print_helper(node._left_child, none_value)
+        right, m, q, y = self._pretty_print_helper(node._right_child, none_value)
         s = str(node._value)
         u = len(s)
         first_line = (x + 1) * ' ' + (n - x - 1) * '_' + s + y * '_' + (m - y) * ' '
