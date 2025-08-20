@@ -14,4 +14,6 @@ todo.md
 venv/
 .ruff_cache
 secret.txt
-avl_tree.py
+red_black_tree.py
+test_avl_tree.py
+test_red_black_tree.py
