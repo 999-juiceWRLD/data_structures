@@ -235,11 +235,3 @@ class AVLTree(BinarySearchTree):
         parent_node = node.parent
         self.delete_node(node.value, node)
         self._rebalance_path(parent_node, deletion=True)
-
-
-if __name__ == "__main__":
-    import random
-    bst = AVLTree()
-    for _ in range(20):
-        bst.insert(random.randint(0, 100))
-    bst.pretty_print()

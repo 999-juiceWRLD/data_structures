@@ -3,6 +3,7 @@ from .linked_list import LinkedList
 from .doubly_linked_list import Node, DoublyLinkedList
 from .queues import QueueArray, LinkedQueue, CircularQueue, PriorityQueue
 from .stack import StackArray, LinkedStack
+from .avl_tree import AVLTreeNode, AVLTree
 from .binary_search_tree import (
     traversal_keywords,
     copy_keywords,
@@ -27,4 +28,6 @@ __all__ = [
     "copy_keywords",
     "default_keyword",
     "BinarySearchTree",
+    "AVLTreeNode",
+    "AVLTree",
 ]

@@ -218,11 +218,11 @@ class BinarySearchTree:
                     return None
                 return self.search_element(searched_node, current_node.right_child)
 
-    def search_iterative(self, value):
-        if self._root is None:
-            raise Exception("Binary search tree is empty")
+    def search_iterative(self, value, none_value=None):
+        if self._root is none_value:
+            raise Exception("Binary search tree is empty")        
         current_node = self.root
-        while current_node is not None:
+        while current_node is not none_value:
             if current_node.value == value:
                 return current_node
             elif current_node.value >= value:
@@ -230,7 +230,6 @@ class BinarySearchTree:
             else:
                 current_node = current_node.right_child
         raise Exception(f"Value {value} is not found")
-        
         
     def delete_node(self, value, node=None):
         if node is None:
@@ -325,25 +324,28 @@ class BinarySearchTree:
                 successor.right_child.parent = successor_parent
             self._size -= 1
             
-    def find_min(self, node=None, return_value=False):
+    def find_min(self, node=None, return_value=False, none_value=None):
         self._check_empty()
-        if node is None:
+        if node is none_value:
             current_node = self.root
         else:
-            current_node = self.search_element(node)
-        while current_node.left_child:
+            current_node = node
+            
+        while current_node.left_child is not none_value:
             current_node = current_node.left_child
+        
         if return_value is True:
             return current_node.value
         return current_node
 
-    def find_max(self, node=None, return_value=False):
+    def find_max(self, node=None, return_value=False, none_value=None):
         self._check_empty()
-        if node is None:
+        if node is none_value:
             current_node = self.root
         else:
-            current_node = self.search_element(node)
-        while current_node.right_child:
+            current_node = node
+            
+        while current_node.right_child is not none_value:
             current_node = current_node.right_child
         if return_value is True:
             return current_node.value
