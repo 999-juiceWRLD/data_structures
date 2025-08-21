@@ -4,6 +4,7 @@ from .doubly_linked_list import Node, DoublyLinkedList
 from .queues import QueueArray, LinkedQueue, CircularQueue, PriorityQueue
 from .stack import StackArray, LinkedStack
 from .avl_tree import AVLTreeNode, AVLTree
+from .red_black_tree import Color, RBTreeNode, RedBlackTree
 from .binary_search_tree import (
     traversal_keywords,
     copy_keywords,
@@ -30,4 +31,7 @@ __all__ = [
     "BinarySearchTree",
     "AVLTreeNode",
     "AVLTree",
+    "Color",
+    "RBTreeNode",
+    "RedBlackTree",
 ]
