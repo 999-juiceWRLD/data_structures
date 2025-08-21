@@ -19,8 +19,8 @@ Current data structures are:
     - Circular Queue
     - Priority Qeueue (Using Linked List)
 - Binary Search Tree
-
-**Currently Working On:** *Red-Black Trees.*
+- AVL Tree
+- Red-Black Tree
 
 To download this package, go to terminal:
 ```sh
