@@ -70,7 +70,6 @@ class AVLTree(BinarySearchTree):
             node.balance_factor = self.calculate_balance_factor(node)
             if abs(node.balance_factor) > 1:
                 self._rebalance(node, deletion)
-            # after rebalancing, calculate balance factors again
             node = node.parent
     
     def _rebalance(self, node, deletion=False):
